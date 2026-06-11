@@ -1,0 +1,6 @@
+interface:
+  display_name: "codex窗口修复"
+  short_description: "验证并修复 Windows Codex 窗口透明、黑块、圆角残留问题。"
+  default_prompt: "Use $fix-codex-windows to dry-run and repair Codex Desktop window transparency on Windows."
+policy:
+  allow_implicit_invocation: true

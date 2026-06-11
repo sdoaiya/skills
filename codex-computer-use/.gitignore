@@ -1,0 +1,10 @@
+*.log
+*.tmp
+*.bak
+*.zip
+*.msix
+codex-msix-repack/
+work-*/
+artifacts/
+backups/
+.skill-version

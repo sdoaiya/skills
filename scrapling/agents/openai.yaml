@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scrapling"
+  short_description: "Python scraping with Scrapling"
+  default_prompt: "Use $scrapling to fetch, parse, or inspect web pages with Scrapling."

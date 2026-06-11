@@ -1,0 +1,8 @@
+interface:
+  display_name: "Codex Windows Control Repair"
+  short_description: "Diagnose and repair Windows Computer Use and Chrome control."
+  brand_color: "#2563EB"
+  default_prompt: "Use $codex-computer-use to diagnose and repair Codex Desktop Computer Use, Any App, bundled plugins, browser, and Chrome control on Windows."
+
+policy:
+  allow_implicit_invocation: true
