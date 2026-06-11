@@ -13,6 +13,7 @@ Always do these first:
 
 1. Print exactly one routing status line at the start of every assistant turn:
    `已选择技能链路：...（原因：...）`
+   Skill names in this line must be shown in Chinese using clear aliases, not raw identifiers. For example, use `中文总控` for `chinese-dev-guide`, `卡帕西编码准则` for `karpathy-guidelines`, `多工人并行执行` for subagent or worker routing, `测试驱动开发` for TDD, and `验证收尾` for completion checks.
 2. Restate the user's goal in plain Chinese.
 3. Recommend one workflow path and briefly explain why it fits.
 4. Route to one primary skill chain instead of stacking overlapping planners.
