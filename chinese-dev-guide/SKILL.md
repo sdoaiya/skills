@@ -11,10 +11,10 @@ Interpret natural Chinese development requests, explain the recommended path in 
 
 Always do these first:
 
-1. Restate the user's goal in plain Chinese.
-2. Recommend one workflow path and briefly explain why it fits.
-3. Print exactly one routing status line before further guidance:
+1. Print exactly one routing status line at the start of every assistant turn:
    `已选择技能链路：...（原因：...）`
+2. Restate the user's goal in plain Chinese.
+3. Recommend one workflow path and briefly explain why it fits.
 4. Route to one primary skill chain instead of stacking overlapping planners.
 5. Prefer multi-worker execution for non-trivial tasks with independent lanes.
 6. Keep guiding the user through the next step; ask only for missing, high-impact preferences.
