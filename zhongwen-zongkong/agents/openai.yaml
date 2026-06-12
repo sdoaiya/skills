@@ -1,0 +1,7 @@
+interface:
+  display_name: "中文总控"
+  short_description: "中文路由、多工人安排、技能链显示和验证收尾"
+  default_prompt: "Use $zhongwen-zongkong as the first routing layer for my Chinese development request: restate the goal in Chinese, refresh available skills/plugins if I mention new installs or visibility changes, choose a realistic workflow for the current Codex Desktop tools, prefer parallel execution when useful, and finish with concrete verification."
+
+policy:
+  allow_implicit_invocation: true

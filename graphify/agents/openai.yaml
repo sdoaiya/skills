@@ -1,0 +1,7 @@
+interface:
+  display_name: "Graphify"
+  short_description: "把代码、文档、论文和图片转成知识图谱、HTML、JSON 和审计报告"
+  default_prompt: "Use $graphify to turn the target folder or corpus into a knowledge graph with clustered communities, HTML/JSON outputs, and an audit report."
+
+policy:
+  allow_implicit_invocation: true

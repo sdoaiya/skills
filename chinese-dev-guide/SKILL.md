@@ -1,6 +1,6 @@
 ﻿---
 name: chinese-dev-guide
-description: Default Chinese orchestrator for non-trivial new tasks, especially when the user asks in Chinese or wants routing, planning, implementation, review, debugging, or "按你的建议来". Trigger first for natural Chinese development requests, restate the goal in Chinese, choose the workflow, prefer multi-worker/parallel execution when useful, and route to the right installed skills.
+description: Chinese development router for Codex. Use first for Chinese development requests to restate the goal in Chinese, choose a compact workflow, prefer parallel work when useful, and route to relevant installed skills.
 metadata:
   short-description: 中文总控：中文路由、多工人安排和技能链显示
 ---
