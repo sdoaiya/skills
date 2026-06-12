@@ -2,3 +2,6 @@ interface:
   display_name: "中文开发总控"
   short_description: "把自然中文开发需求分流到合适技能并全程给出建议指导"
   default_prompt: "Use $chinese-dev-guide to interpret my Chinese development request, recommend the best workflow, and guide me in Chinese."
+
+policy:
+  allow_implicit_invocation: true
