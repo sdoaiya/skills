@@ -1,0 +1,3 @@
+chart_id,question,takeaway,source_ids,metric,dimension,chart_type,unit,section,output_path,status
+CH-001,Global trade trend for target HS,Global demand recovered after 2022,"SRC-001|SRC-003",import_value,year,line,USD mn,4,charts/ch-001-global-trend.png,planned
+CH-002,Target country import source ranking,China gained share in the target market,"SRC-001|SRC-004",import_share,origin_country,bar,%,7,charts/ch-002-country-ranking.png,planned

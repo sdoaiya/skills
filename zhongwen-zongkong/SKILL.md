@@ -1,13 +1,13 @@
 ---
 name: zhongwen-zongkong
-description: Default Chinese orchestrator for Codex Desktop. Use first for non-trivial Chinese development requests to restate the goal in Chinese, choose a compact workflow, show the Chinese skill chain, refresh available skills/plugins when the user installs or mentions new capabilities, prefer real parallel tool execution when useful, route to available installed skills, and finish with concrete verification.
+description: Default Chinese orchestrator for Codex Desktop. Use first for non-trivial Chinese development requests to restate the goal in Chinese, choose a compact workflow, show the Chinese skill chain, evaluate multi-worker eligibility, refresh available skills/plugins when capabilities change, route to installed skills, and finish with concrete verification.
 metadata:
   short-description: 中文总控：中文路由、多工人安排、技能链显示和验证收尾
 ---
 
 # 中文总控
 
-解释自然中文开发请求，用中文选择最合适的工作流，并把任务路由到当前环境里真实可用的技能和工具。它是 `chinese-dev-guide` 的可见替代版：行为上叫“中文总控”，实际可触发 ID 是 `zhongwen-zongkong`。
+解释自然中文开发请求，用中文选择最合适的工作流，并把任务路由到当前环境里真实可用的技能和工具。行为上叫“中文总控”，实际可触发 ID 是 `zhongwen-zongkong`。
 
 默认把 `karpathy-guidelines` 作为编码和评审心智模型：先想清楚，保持简单，手术式修改，用可验证检查收尾。
 
@@ -20,7 +20,7 @@ metadata:
 2. 技能链路里的名称用中文别名，不直接暴露生硬 ID。例如：`中文总控`、`卡帕西编码准则`、`多工人并行执行`、`计划评审`、`验证收尾`。
 3. 用一句普通中文复述用户目标，除非任务很小、复述会显得啰嗦。
 4. 选择一条主工作流，不堆叠多个重型规划器。
-5. 任务有独立部分时，优先使用真实可用的并行能力：`multi_tool_use.parallel`、并行读取/搜索、可用子代理或明确的多工人工具。
+5. 对每个非平凡任务做一次并行性判定：如果有 2 个以上独立工作流，或用户明确要求多 worker/并行/子代理，优先启用真实可用的多 worker 或并行工具；如果不启用，技能链路原因里要说明“任务单点/强耦合/共享写集/太小”。
 6. 只问缺失且高影响的问题；能从本地上下文安全推断时就继续做。
 7. 如果用户说“刚装了插件/技能”“现在应该可用了”“不显示/显示了”，先刷新可用能力判断，再更新路由结论。
 
@@ -37,7 +37,9 @@ metadata:
 | 简单事实、定义、命令输出 | 直接回答 | 不启动重流程。 |
 | 范围模糊、目标不清 | 中文总控 + 澄清 | 先问一个关键问题，或给出合理假设后继续。 |
 | 普通实现或 bug 修复 | 中文总控 + 卡帕西编码准则 + 验证收尾 | 先读代码/找复现点，再做最小改动，最后运行聚焦检查。 |
-| 多个独立文件、问题、研究线 | 中文总控 + 多工人并行执行 | 用 `multi_tool_use.parallel` 并行搜索、读取、验证；有可用子代理时再拆代理。 |
+| 用户明确要求多 worker、并行代理、子代理 | 中文总控 + 多工人并行执行 | 若 `multi_agent_v1` 或同类子代理工具可见，至少派出 1 个有清晰边界的 worker/explorer，同时主线继续做不重叠工作；不要把当前阻塞的下一步交给 worker 后空等。 |
+| 多个独立文件、问题、研究线或可分写集 | 中文总控 + 多工人并行执行 | 有真实子代理时按独立问题域/写集拆 worker；只有读取、搜索、验证等无状态任务时用 `multi_tool_use.parallel`。 |
+| 多个命令、文件读取、轻量验证但不值得子代理 | 中文总控 + 并行工具执行 | 用 `multi_tool_use.parallel` 批量读文件、搜索、跑互不依赖的检查。 |
 | 代码评审、评审一下 | 评审模式 + 卡帕西编码准则 | 先列风险和缺陷，按严重度排序，再给简短摘要。 |
 | 需要计划但未要求实现 | 计划评审 | 若 Superpowers 中文版的 `writing-plans` 可见，优先使用；否则给短计划，每步带验证方式。 |
 | 高风险变更：认证、迁移、删除、公共 API | 计划评审 + 明确确认 | 先说明假设和风险，必要时停下问用户。 |
@@ -55,7 +57,10 @@ metadata:
 - 需要发现隐藏/延迟工具时，优先用 `tool_search`。
 - 需要浏览器真实交互时，使用可用的 Playwright/浏览器工具；需要生成图片时使用 `imagegen`。
 - 需要读写文件时，先读现状，编辑用 `apply_patch`，避免无关改动。
-- 需要并行时，优先并行执行独立的读取、搜索、验证任务；不要为了“多工人”制造复杂度。
+- 在 Windows PowerShell 5.1 中读取中文/UTF-8 文本时，必须显式使用 `Get-Content -Encoding UTF8`；不要用默认 `Get-Content` 读取无 BOM 的 `SKILL.md`、Markdown 或配置文件，否则会把正常中文显示成 mojibake 乱码。
+- 需要并行时，先判断是“多 worker”还是“并行工具”：独立问题域、独立写集、独立审查线优先用 worker/explorer；批量读取、搜索、验证优先用 `multi_tool_use.parallel`。
+- 多 worker 的默认模式：主线保留当前关键路径，worker 承担旁路审查、独立子问题或不重叠写集；worker 提示必须写清楚范围、约束、输出和“不要还原别人改动”。
+- 不启用多 worker 的合理理由只有：任务可在一次直接回答内完成、所有步骤强顺序依赖、多个 worker 会编辑同一小块内容、或没有真实可用的子代理工具。此时在链路原因里简短说明。
 - `team` 只在用户明确要求 CLI/tmux 多工人，或任务确实长到需要持久编排时推荐。
 
 ## 可用能力更新机制
@@ -98,11 +103,16 @@ metadata:
 - 最终总结用中文，短段落优先。
 - 文件引用用绝对路径链接。
 - 不把“工具名”当作用户必须理解的概念；必要时翻译成工作含义。
+- 技能链路行要显式给出并行决策，例如：
+  - `已选择技能链路：中文总控 + 多工人并行执行 + 验证收尾（原因：实现、验证、审查可独立推进，启用 worker）`
+  - `已选择技能链路：中文总控 + 并行工具读取 + 卡帕西编码准则（原因：只有独立文件读取，使用并行工具，不启用 worker）`
+  - `已选择技能链路：中文总控 + 直接处理（原因：任务单点且很小，协调成本高于收益）`
 
 ## 常见错误
 
 - 不要因为用户说中文就强行启动重型流程；小问题直接答。
 - 不要同时启动多个规划体系；选一条主链路即可。
 - 不要引用当前会话不可用的技能当作已经执行；先看 Available skills 或用 `codex debug prompt-input` 复核。
-- 不要为了并行而并行；只有独立工作流才拆分。
+- 不要把“优先多 worker”降级成口头承诺；能拆出独立工作流且工具可见时，实际派 worker 或使用并行工具。
+- 不要为了并行而并行；只有独立工作流才拆分，不能拆时要说明原因。
 - 不要假设 `chinese-dev-guide` 可见；当前可见替代是 `zhongwen-zongkong`。

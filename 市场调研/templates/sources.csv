@@ -1,0 +1,5 @@
+source_id,title,publisher,level,year,url_or_path,scope,section,verification_method,limitations
+SRC-001,UN Comtrade HS 8429 imports,UN Comtrade,P1,2024,https://comtradeplus.un.org/,Global imports by HS 8429,4|7,Cross-check with WITS totals,Mirror data may lag by reporting country
+SRC-002,Target country trade guide,Ministry of Commerce,P2,2025,E:\data\country-guide.pdf,Country access and certification,7|10,Manual extraction with page references,Guidance may summarize older local rules
+SRC-003,WITS import value series,World Bank WITS,P1,2024,https://wits.worldbank.org/,Trade value series by reporter and partner,4,Cross-check with Comtrade mirror totals,Country uploads may revise historical values
+SRC-004,ITC Trade Map source ranking,ITC Trade Map,P2,2024,https://www.trademap.org/,Import source country ranking for target market,7,Compare with local customs publication,Access may require subscription for some detail tables

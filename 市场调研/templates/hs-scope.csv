@@ -1,0 +1,3 @@
+industry,product_line,hs_code,hs_level,include_rule,exclude_rule,notes
+Engineering machinery,Excavators,842952,6,Tracked self-propelled excavators only,Exclude parts and attachments,Confirm target subcategories before data pull
+Engineering machinery,Parts,843149,6,Parts used for selected machinery only,Exclude unrelated construction equipment parts,Use with caution because code is mixed-use
