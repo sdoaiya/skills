@@ -35,6 +35,8 @@ def main() -> int:
     issues: list[str] = []
 
     for line_number, line in enumerate(lines, start=1):
+        if line.lstrip().startswith("#"):
+            continue
         if not NUMBER_PATTERN.search(line):
             continue
         quantitative_lines += 1

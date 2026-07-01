@@ -1,0 +1,53 @@
+{
+  "active_projects": [
+    {
+      "id": "ai_pilot_shandong",
+      "name": "山东AI外贸赋能工具应用试点专项",
+      "status": "active",
+      "owner_role": "总负责人",
+      "next_actions": [
+        "完善16地市试点企业筛选与台账",
+        "销售从启动即介入，保障客情",
+        "交付侧负责工具试用效果和问题闭环",
+        "宣传侧沉淀标杆案例"
+      ]
+    },
+    {
+      "id": "g_end_middle_platform",
+      "name": "全国G端中台建设",
+      "status": "active",
+      "next_actions": [
+        "统一底表、台账、任务入口",
+        "设计Codex自动归档与跨表同步机制",
+        "沉淀新人培训与考核体系"
+      ]
+    },
+    {
+      "id": "industry_belt_descent",
+      "name": "产业带下沉小型沙龙/闭门会",
+      "status": "active",
+      "next_actions": [
+        "聚焦15-20人精品场",
+        "用邀约礼包作为敲门砖",
+        "形成选品、沙龙、走访、复盘闭环"
+      ]
+    },
+    {
+      "id": "jining_youpinku",
+      "name": "济宁优品库数字外贸赋能提升项目",
+      "status": "planning",
+      "next_actions": [
+        "以政府购买服务方式定项",
+        "控制在领导汇报3页内",
+        "避免卖软件表达"
+      ]
+    }
+  ],
+  "archived_or_reference_projects": [
+    "济南出海培训会",
+    "德城区国资订单代运营",
+    "泰安外贸门户合作",
+    "东营助企营大讲堂通用方案",
+    "济南高新区外贸优品展销中心"
+  ]
+}

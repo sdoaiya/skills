@@ -23,7 +23,11 @@ OPTIONAL_FILES = [
     "sources.csv",
     "chart-plan.csv",
     "country-scorecard.csv",
+    "research-retrospective.csv",
     "report-outline.md",
+]
+OPTIONAL_NESTED_FILES = [
+    "notes/evolution-backlog.md",
 ]
 
 
@@ -99,6 +103,13 @@ def package_project(project_dir: Path, destination: Path, bundle_name: str, forc
         src_file = project_dir / file_name
         if src_file.exists():
             shutil.copy2(src_file, package_dir / file_name)
+
+    for file_name in OPTIONAL_NESTED_FILES:
+        src_file = project_dir / file_name
+        if src_file.exists():
+            dst_file = package_dir / file_name
+            dst_file.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src_file, dst_file)
 
     manifest_path = package_dir / "PACKAGE_CONTENTS.txt"
     manifest_lines = [

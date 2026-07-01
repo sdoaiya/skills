@@ -73,6 +73,7 @@ def render_readme(project_dir: Path, topic: str, region: str, timeframe: str) ->
 - `sources.csv`：登记来源、证据等级、章节映射和复核方式。
 - `chart-plan.csv`：规划每张图回答的问题、来源和输出路径。
 - `country-scorecard.csv`：记录国别评分与优先级。
+- `research-retrospective.csv`：记录交付后复盘、评分和改进动作。
 - `report-outline.md`：白皮书写作骨架。
 - `data/raw/`：原始下载数据。
 - `data/processed/`：清洗后的分析表。
@@ -89,6 +90,7 @@ def render_readme(project_dir: Path, topic: str, region: str, timeframe: str) ->
 4. 基于 `report-outline.md` 扩写主稿，最终输出到 `output/full-report.md`。
 5. 生成 `output/report.html`、`output/report.pdf`、`output/report.docx`。
 6. 运行校验脚本，确保来源、图表、主稿和交付目录完整。
+7. 更新 `research-retrospective.csv` 并运行自我进化脚本生成 `notes/evolution-backlog.md`。
 
 ## 校验命令
 
@@ -96,7 +98,9 @@ def render_readme(project_dir: Path, topic: str, region: str, timeframe: str) ->
 python "{SKILL_ROOT / 'checks' / 'check_sources.py'}" "{project_dir / 'sources.csv'}" --require-sections 4 7
 python "{SKILL_ROOT / 'checks' / 'check_charts.py'}" "{project_dir / 'chart-plan.csv'}" "{project_dir / 'sources.csv'}"
 python "{SKILL_ROOT / 'checks' / 'check_claims.py'}" "{project_dir / 'output' / 'full-report.md'}"
-python "{SKILL_ROOT / 'checks' / 'check_delivery.py'}" "{project_dir / 'output'}"
+python "{SKILL_ROOT / 'checks' / 'check_delivery.py'}" "{project_dir}"
+python "{SKILL_ROOT / 'checks' / 'check_retrospective.py'}" "{project_dir / 'research-retrospective.csv'}"
+python "{SKILL_ROOT / 'scripts' / 'evolve_project.py'}" "{project_dir}"
 ```
 """
     readme_path.write_text(readme, encoding="utf-8")

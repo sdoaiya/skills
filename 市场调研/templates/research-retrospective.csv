@@ -1,0 +1,4 @@
+item_id,category,score,evidence,issue,next_action,owner,status
+RET-001,sources,3,Sources table includes P1/P2 rows,Core claims still need page-level citations,Add page references for every quantitative claim,researcher,open
+RET-002,charts,3,Chart plan has source mappings,Some planned charts are not rendered yet,Generate missing chart files and rerun chart check,researcher,open
+RET-003,delivery,2,Markdown draft exists,Word/PDF/HTML package not complete,Export all delivery formats and rerun delivery check,researcher,open

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GEndTaskIntake",
+  "type": "object",
+  "required": [
+    "task_name",
+    "task_type",
+    "audience",
+    "desired_output",
+    "deadline"
+  ],
+  "properties": {
+    "task_name": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string",
+      "enum": [
+        "政府汇报方案",
+        "培训活动方案",
+        "合作谈判方案",
+        "台账/表格",
+        "合同/报价",
+        "通知/海报",
+        "内部周报/月报",
+        "Codex自动化",
+        "其他"
+      ]
+    },
+    "audience": {
+      "type": "string",
+      "description": "政府领导/内部管理层/企业/协会/国资平台/销售/交付等"
+    },
+    "desired_output": {
+      "type": "string",
+      "description": "Word/PPT/脑图/表格/代码/图片等"
+    },
+    "deadline": {
+      "type": "string"
+    },
+    "known_context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_info": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

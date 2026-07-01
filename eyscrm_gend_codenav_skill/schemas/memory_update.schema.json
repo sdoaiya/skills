@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MemoryUpdate",
+  "type": "object",
+  "required": [
+    "date",
+    "category",
+    "operation",
+    "content",
+    "source",
+    "confidence"
+  ],
+  "properties": {
+    "date": {
+      "type": "string",
+      "description": "YYYY-MM-DD"
+    },
+    "category": {
+      "type": "string",
+      "description": "如 user_role / project_tracks / document_style / risk_and_compliance"
+    },
+    "operation": {
+      "type": "string",
+      "enum": [
+        "add",
+        "revise",
+        "archive",
+        "confirm",
+        "flag_pending"
+      ]
+    },
+    "content": {
+      "type": "object"
+    },
+    "source": {
+      "type": "string",
+      "description": "用户口述/文件名/会议纪要/表格/人工确认"
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "likely",
+        "pending"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "supersedes": {
+      "type": "string"
+    }
+  }
+}

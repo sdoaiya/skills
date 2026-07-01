@@ -1,8 +1,8 @@
 interface:
   display_name: "市场调研"
-  short_description: "生成官方数据支撑、图表丰富、可导出 Word/PDF/HTML 的市场研究白皮书。"
+  short_description: "生成官方数据支撑、图表丰富、可导出并可复盘进化的市场研究白皮书。"
   brand_color: "#1F4E79"
-  default_prompt: "使用 $market-research 对我指定的行业和 HS 编码生成一份全球市场分析白皮书，要求官方/学术数据可查、图表丰富，并导出 Word、PDF、HTML。"
+  default_prompt: "使用 $market-research 对我指定的行业和 HS 编码生成一份全球市场分析白皮书，要求官方/学术数据可查、图表丰富，导出 Word、PDF、HTML，并生成交付后自我进化 backlog。"
 
 policy:
   allow_implicit_invocation: true

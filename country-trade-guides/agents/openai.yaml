@@ -1,0 +1,4 @@
+interface:
+  display_name: "国别贸易指南"
+  short_description: "检索和引用本地 2025 年国别贸易指南，用于市场进入、出海分析和国别风险研究。"
+  default_prompt: "使用 $country-trade-guides 查询指定国家的市场准入、贸易环境、风险和采购机会，并给出可引用出处。"

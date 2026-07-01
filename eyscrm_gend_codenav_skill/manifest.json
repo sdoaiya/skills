@@ -1,0 +1,22 @@
+{
+  "name": "eyscrm_gend_codenav_skill",
+  "display_name": "G端中台知识记忆与协同Skill",
+  "version": "0.1.0",
+  "created_at": "2026-06-24",
+  "language": "zh-CN",
+  "owner_role": "全国G端中台负责人 / 山东G端负责人 / 山东重点项目负责人",
+  "purpose": [
+    "为 Codex / AI Agent 提供可读取、可检索、可持续更新的业务知识包",
+    "沉淀G端、优品库、AI试点、产业带下沉、项目方案、组织职责等上下文",
+    "通过结构化记忆、任务路由、模板与演进日志实现跨项目数据共享和长期记忆"
+  ],
+  "entrypoints": {
+    "skill_instruction": "SKILL.md",
+    "memory_bank": "data/memory_bank.json",
+    "projects": "data/projects.json",
+    "cli": "scripts/skill_cli.py",
+    "memory_store": "scripts/memory_store.py"
+  },
+  "evolution_mode": "append_only_with_review",
+  "privacy_note": "默认不存储个人邮箱、精确地址、身份证件等敏感信息；如确需接入外部系统，请在本地自行配置。"
+}

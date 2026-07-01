@@ -59,6 +59,7 @@ def main() -> int:
     sources_csv = project_dir / "sources.csv"
     chart_plan_csv = project_dir / "chart-plan.csv"
     report_path = project_dir / "output" / "full-report.md"
+    retrospective_csv = project_dir / "research-retrospective.csv"
 
     checks: list[tuple[str, list[str]]] = [
         (
@@ -97,6 +98,14 @@ def main() -> int:
                 sys.executable,
                 str(CHECKS_DIR / "check_delivery.py"),
                 str(project_dir),
+            ],
+        ),
+        (
+            "retrospective",
+            [
+                sys.executable,
+                str(CHECKS_DIR / "check_retrospective.py"),
+                str(retrospective_csv),
             ],
         ),
     ]
