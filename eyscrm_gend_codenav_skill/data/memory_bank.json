@@ -1,9 +1,11 @@
 {
   "meta": {
     "version": "0.1.0",
-    "last_updated": "2026-06-24",
+    "last_updated": "2026-07-02",
     "source": "ChatGPT当前已掌握的用户业务上下文与历史沉淀",
-    "update_policy": "重要稳定信息进入长期记忆；短期事项进入项目状态；争议或待确认内容标记为pending。"
+    "update_policy": "重要稳定信息进入长期记忆；短期事项进入项目状态；争议或待确认内容标记为pending。",
+    "merged_confirmed_updates_through": "2026-07-02",
+    "knowledge_layer_index_file": "C:\\Users\\zdy25\\.codex\\skills\\eyscrm_gend_codenav_skill\\logs\\export_knowledge_layers_2026-07-02.md"
   },
   "user_role": {
     "role_summary": "用户定位为全国G端中台负责人、山东G端负责人、山东重点项目负责人。",
@@ -104,7 +106,22 @@
         "duration": "1h"
       }
     ],
-    "assessment": "两套题库，每套不少于30题，80分及格。"
+    "assessment": "两套题库，每套不少于30题，80分及格。",
+    "association_channel_strategy": "协会是每位GR前端人员都会遇到的合作方，需单独形成针对弱渠道的完整方案。",
+    "cross_region_resource_synergy": "属地GR团队需自上而下梳理政府资源、优先拓展区域与计划；各区域GR负责人掌握的资源不限于当地，需形成跨区域资源互补与合力。",
+    "management_objectives": [
+      "统一认知：让GR、G端BD、区域负责人、解决方案团队对G端打法使用同一套语言和动作。",
+      "提升实战能力：重点提升政策判断、政府沟通、项目推进、关系经营、风险识别。",
+      "建立作战方法：将个人经验沉淀为总部可复制打法。"
+    ],
+    "performance_and_incentive_note": "GR团队需要配套绩效设定机制与激励机制，以保障前端人员权益。",
+    "new_hire_profile": "全国新进G端人员中，存在由销售转岗或兼职承担G端工作的新人，前期基础较弱。",
+    "training_focus_addendum": [
+      "培训重点聚焦产业带下沉定向培育。",
+      "需补充与政府商务口接触时的礼仪、着装、注意事项。",
+      "协会、园区、第三方可弱化，不作为该行动重点。"
+    ],
+    "assessment_addendum": "新人考核需覆盖政务关系处理基本素质、产业带下沉理解与执行，题量不少于30题，100分制，80分及格。"
   },
   "middle_office_work_ai": {
     "current_staffing": "最新编制为用户负责人 + 1名BD + 1名中台。此前后端/中台压缩，保留1名中台人员。",
@@ -131,7 +148,24 @@
     "preferred_tools": [
       "WPS多维表格",
       "后续可迁移至钉钉多维表格或统一数据平台"
-    ]
+    ],
+    "role_architecture": [
+      "G端负责人",
+      "G端BD",
+      "中台"
+    ],
+    "cross_middle_office_hub": "G端中台同时作为与销售中台、海外仓中台、海外事业部中台及后续供应链中台进行信息交互的枢纽入口。",
+    "system_roadmap": {
+      "current": "当前以WPS多维表格为主要协同载体。",
+      "next": "后续需兼容钉钉多维表格，或逐步统一到单一数据平台，以减少数据壁垒。"
+    },
+    "youpinku_review_process_detail": [
+      "优品库企业或产品审核属于较零散但高频的中台工作。",
+      "其中产品审核场景是企业上传到优品平台后，由人工逐项审查。",
+      "该审核流程涉及跨系统操作。"
+    ],
+    "internal_expression_preference": "在内部方案中，涉及AI优化中台时，不宜直接使用“替换现有中台”“不能简单无人化”等生硬表述；应改为结合场景体现人工审核、责任把关与协同价值。",
+    "automation_design_principle": "G端任务本身延展性高，知识库与自动化系统设计需支持项目动态延展，而不是一次性静态结构。"
   },
   "project_tracks": {
     "industry_belt_descent": {
@@ -169,7 +203,26 @@
         "宁阳",
         "开封国资6月领导换任后重启",
         "聊城财金重点推进"
-      ]
+      ],
+      "execution_governance": {
+        "regional_g_manager": [
+          "目标制定",
+          "区域划分（地市-区县-街道）",
+          "信息汇总到产业带下沉一览表",
+          "建立周报体系：拜访情况、预期偏离、意向、卡点、改进",
+          "执行半月复盘与月复盘"
+        ],
+        "g_end_middle_office": [
+          "输出通用方案与物料资料",
+          "汇集并分析产业带数据",
+          "每周五汇总产业带信息总表"
+        ],
+        "conversion_and_feedback": [
+          "G端不仅是组织者，也是行动结果的负责与监督方。",
+          "需与销售中台建立转化反馈机制。",
+          "需持续向政府侧进行结果与效果反馈并维护关系。"
+        ]
+      }
     },
     "shandong_global_trial_sale": {
       "background": "省委省政府“万企出海、鲁贸全球”；依托山东外贸优品库平台。",
@@ -367,5 +420,391 @@
       "对过期项目标记 archived，不直接覆盖删除",
       "新增记忆必须可追溯到用户确认或文件来源"
     ]
+  },
+  "_memory_updates": [
+    {
+      "date": "2026-07-02",
+      "category": "g_end_middle_platform",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：GR团队培训与部署方案（2026-04-29）",
+      "confidence": "confirmed",
+      "reason": "补充全国GR/G端协同打法中的稳定原则与管理要求。",
+      "content": {
+        "association_channel_strategy": "协会是每位GR前端人员都会遇到的合作方，需单独形成针对弱渠道的完整方案。",
+        "cross_region_resource_synergy": "属地GR团队需自上而下梳理政府资源、优先拓展区域与计划；各区域GR负责人掌握的资源不限于当地，需形成跨区域资源互补与合力。",
+        "management_objectives": [
+          "统一认知：让GR、G端BD、区域负责人、解决方案团队对G端打法使用同一套语言和动作。",
+          "提升实战能力：重点提升政策判断、政府沟通、项目推进、关系经营、风险识别。",
+          "建立作战方法：将个人经验沉淀为总部可复制打法。"
+        ],
+        "performance_and_incentive_note": "GR团队需要配套绩效设定机制与激励机制，以保障前端人员权益。"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "middle_office_work_ai",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：政府关系岗位重塑方案（2026-06-24）",
+      "confidence": "confirmed",
+      "reason": "补充岗位重塑场景下中台的协同定位与系统演进方向。",
+      "content": {
+        "role_architecture": [
+          "G端负责人",
+          "G端BD",
+          "中台"
+        ],
+        "cross_middle_office_hub": "G端中台同时作为与销售中台、海外仓中台、海外事业部中台及后续供应链中台进行信息交互的枢纽入口。",
+        "system_roadmap": {
+          "current": "当前以WPS多维表格为主要协同载体。",
+          "next": "后续需兼容钉钉多维表格，或逐步统一到单一数据平台，以减少数据壁垒。"
+        }
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "g_end_middle_platform",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：G端新人培训与考核（2026-05-23）",
+      "confidence": "confirmed",
+      "reason": "补充G端新人培训对象与考核设计口径。",
+      "content": {
+        "new_hire_profile": "全国新进G端人员中，存在由销售转岗或兼职承担G端工作的新人，前期基础较弱。",
+        "training_focus_addendum": [
+          "培训重点聚焦产业带下沉定向培育。",
+          "需补充与政府商务口接触时的礼仪、着装、注意事项。",
+          "协会、园区、第三方可弱化，不作为该行动重点。"
+        ],
+        "assessment_addendum": "新人考核需覆盖政务关系处理基本素质、产业带下沉理解与执行，题量不少于30题，100分制，80分及格。"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "project_tracks",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：产业带下沉SOP优化（2026-05-10）",
+      "confidence": "confirmed",
+      "reason": "补充产业带下沉项目的执行治理闭环。",
+      "content": {
+        "industry_belt_descent_execution_governance": {
+          "regional_g_manager": [
+            "目标制定",
+            "区域划分（地市-区县-街道）",
+            "信息汇总到产业带下沉一览表",
+            "建立周报体系：拜访情况、预期偏离、意向、卡点、改进",
+            "执行半月复盘与月复盘"
+          ],
+          "g_end_middle_office": [
+            "输出通用方案与物料资料",
+            "汇集并分析产业带数据",
+            "每周五汇总产业带信息总表"
+          ],
+          "conversion_and_feedback": [
+            "G端不仅是组织者，也是行动结果的负责与监督方。",
+            "需与销售中台建立转化反馈机制。",
+            "需持续向政府侧进行结果与效果反馈并维护关系。"
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "middle_office_work_ai",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：政府关系岗位重塑方案（2026-06-24）",
+      "confidence": "confirmed",
+      "reason": "补充优品库审核流程细节与内部表达偏好。",
+      "content": {
+        "youpinku_review_process_detail": [
+          "优品库企业或产品审核属于较零散但高频的中台工作。",
+          "其中产品审核场景是企业上传到优品平台后，由人工逐项审查。",
+          "该审核流程涉及跨系统操作。"
+        ],
+        "internal_expression_preference": "在内部方案中，涉及AI优化中台时，不宜直接使用“替换现有中台”“不能简单无人化”等生硬表述；应改为结合场景体现人工审核、责任把关与协同价值。"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "middle_office_work_ai",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：G端知识库与智能体构建（2026-05-16）",
+      "confidence": "confirmed",
+      "reason": "补充G端知识库/自动化系统的设计原则。",
+      "content": {
+        "automation_design_principle": "G端任务本身延展性高，知识库与自动化系统设计需支持项目动态延展，而不是一次性静态结构。"
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "middle_office_work_ai",
+      "operation": "flag_pending",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：政府关系岗位重塑方案（2026-06-24）",
+      "confidence": "pending",
+      "reason": "该编制口径与当前记忆中的“最新编制”存在差异，先作为历史快照暂存，待用户后续确认现行版本。",
+      "content": {
+        "staffing_snapshot_context_2026_06_24": {
+          "total_owner": 1,
+          "g_end_bd": 4,
+          "middle_office": 2,
+          "scope_note": "G端BD负责山东省16地市政府事务对接。"
+        }
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "project_tracks",
+      "operation": "flag_pending",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；对话：山东外贸出海征集（2026-05-19）",
+      "confidence": "pending",
+      "reason": "这是用户在通知稿构思中提出的项目机制草案，适合作为待确认机会方案保留。",
+      "content": {
+        "shandong_export_promotion_collection_concept": {
+          "perspective": "以山东省商务厅促进外贸、推动优质产品出海的角度切入。",
+          "candidate_themes": [
+            "征集企业出海意愿",
+            "征集企业AI赋能与海外仓试点"
+          ],
+          "draft_mechanism": [
+            "择优200家企业免费提供出海诊断服务。",
+            "纳入优品库企业体系。",
+            "优先企业可获60天AI外贸赋能工具免费试用。",
+            "优先企业可免费获得任一国海外仓储展销中心资源及本地化营销对接服务。",
+            "后续组织专家实地调研、制定专属方案并打造可推广案例。"
+          ],
+          "note": "仅为对话中的通知稿构思，未确认为正式政策或正式项目。"
+        }
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "meta",
+      "operation": "add",
+      "source": "用户提供的 ChatGPT 导出 conversations.json；第三轮分层审计（2026-07-02）",
+      "confidence": "confirmed",
+      "reason": "对相关对话完成已确认/待确认/已过期三层归档，形成后续人工合并依据。",
+      "content": {
+        "export_knowledge_layer_index": {
+          "file": "C:\\\\Users\\\\zdy25\\\\.codex\\\\skills\\\\eyscrm_gend_codenav_skill\\\\logs\\\\export_knowledge_layers_2026-07-02.md",
+          "confirmed_count": 8,
+          "pending_count": 3,
+          "expired_count": 3
+        }
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "easygr_profile",
+      "operation": "add",
+      "source": "??????? EasyGR ??????? G ???????????B ???",
+      "confidence": "confirmed",
+      "reason": "????????? EasyGR ?????????????????????",
+      "content": {
+        "easygr_profile": {
+          "name": "EasyGR",
+          "identity": "????????G????????????????????G?????????????????????????????????",
+          "role_summary": "????G????????????????????????????????????????",
+          "core_positions": [
+            "??G????????",
+            "??G??????",
+            "???????????"
+          ],
+          "working_identity": [
+            "G???????",
+            "????????",
+            "????????",
+            "????????"
+          ],
+          "output_preference": [
+            "??????????????????",
+            "???????????????",
+            "????????????",
+            "???????????SOP???"
+          ]
+        },
+        "easygr_operating_system_summary": {
+          "core_models_count": 7,
+          "heuristics_count": 8,
+          "inspector_checklist_count": 8
+        }
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "easygr_operating_system",
+      "operation": "add",
+      "source": "????????? EasyGR ? 4 ?????? G ? Skill ???",
+      "confidence": "confirmed",
+      "reason": "? EasyGR ????????????????????????",
+      "content": {
+        "template_routing_keys": [
+          "government_report",
+          "regional_playbook",
+          "sales_collaboration",
+          "project_retrospective"
+        ],
+        "template_routing_count": 4
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "category": "easygr_operating_system",
+      "operation": "add",
+      "source": "????????? EasyGR ???????",
+      "confidence": "confirmed",
+      "reason": "? EasyGR ???????????????????????",
+      "content": {
+        "shortcut_trigger_keys": [
+          "EasyGR-???"
+        ],
+        "shortcut_trigger_count": 1
+      }
+    }
+  ],
+  "easygr_profile": {
+    "name": "EasyGR",
+    "identity": "????????G????????????????????G?????????????????????????????????",
+    "role_summary": "????G????????????????????????????????????????",
+    "core_positions": [
+      "??G????????",
+      "??G??????",
+      "???????????"
+    ],
+    "working_identity": [
+      "G???????",
+      "????????",
+      "????????",
+      "????????"
+    ],
+    "output_preference": [
+      "??????????????????",
+      "???????????????",
+      "????????????",
+      "???????????SOP???"
+    ]
+  },
+  "easygr_operating_system": {
+    "core_models": [
+      "????????",
+      "??????",
+      "??????",
+      "??????",
+      "???????",
+      "??????",
+      "AI????????"
+    ],
+    "decision_heuristics": [
+      "?????????????????????",
+      "??????????????????",
+      "?????????????????????????",
+      "??????????????",
+      "????????????????????",
+      "???????????????????????????",
+      "?????????????????????????",
+      "???????????????????????????"
+    ],
+    "expression_dna": {
+      "sentence_pattern": [
+        "????",
+        "?????X???Y??????",
+        "???????????"
+      ],
+      "preferred_words": [
+        "??",
+        "??",
+        "??",
+        "??",
+        "??",
+        "??",
+        "??",
+        "??",
+        "??",
+        "???"
+      ],
+      "internal_external_switch": {
+        "government_side": "??????????????????????????",
+        "internal_side": "???????????????ROI????"
+      }
+    },
+    "anti_patterns": [
+      "?????",
+      "?????",
+      "?????",
+      "????????",
+      "??PPT????",
+      "??????????",
+      "?????????????"
+    ],
+    "question_decomposition_order": [
+      "????????????????????",
+      "?????????????????",
+      "???????????",
+      "??????????"
+    ],
+    "inspector_checklist": [
+      "????????",
+      "???????",
+      "????????",
+      "??????????",
+      "?????????",
+      "???????????",
+      "???????",
+      "???????"
+    ],
+    "default_probe_questions": [
+      "?????????????????",
+      "???????????",
+      "????????????",
+      "?????????????",
+      "?????????????",
+      "?????????????????"
+    ],
+    "template_routing": {
+      "government_report": {
+        "template": "C:\\Users\\zdy25\\.codex\\skills\\easygr-perspective\\references\\templates\\01-government-report-template.md",
+        "use_when": [
+          "????",
+          "????",
+          "????????",
+          "???????"
+        ],
+        "principle": "????????????????????????????"
+      },
+      "regional_playbook": {
+        "template": "C:\\Users\\zdy25\\.codex\\skills\\easygr-perspective\\references\\templates\\02-regional-playbook-template.md",
+        "use_when": [
+          "????",
+          "?????",
+          "?????",
+          "??????"
+        ],
+        "principle": "??????????????????????????"
+      },
+      "sales_collaboration": {
+        "template": "C:\\Users\\zdy25\\.codex\\skills\\easygr-perspective\\references\\templates\\03-sales-collaboration-template.md",
+        "use_when": [
+          "G??????",
+          "?????",
+          "????",
+          "????"
+        ],
+        "principle": "????????????SLA?????????"
+      },
+      "project_retrospective": {
+        "template": "C:\\Users\\zdy25\\.codex\\skills\\easygr-perspective\\references\\templates\\04-project-retrospective-template.md",
+        "use_when": [
+          "??????",
+          "????",
+          "????",
+          "??????"
+        ],
+        "principle": "?????????????????????"
+      }
+    },
+    "shortcut_triggers": {
+      "EasyGR-???": {
+        "template": "C:\\Users\\zdy25\\.codex\\skills\\easygr-perspective\\references\\templates\\04-project-retrospective-template.md",
+        "intent": "???????????????????????",
+        "output_rule": "?????????????????????"
+      }
+    }
   }
 }
