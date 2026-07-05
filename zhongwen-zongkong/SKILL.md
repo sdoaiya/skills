@@ -9,7 +9,7 @@ metadata:
 
 解释自然中文开发请求，用中文选择最合适的工作流，并把任务路由到当前环境里真实可用的技能和工具。行为上叫“中文总控”，实际可触发 ID 是 `zhongwen-zongkong`。
 
-默认把 `karpathy-guidelines` 作为编码和评审心智模型：先想清楚，保持简单，手术式修改，用可验证检查收尾。
+默认把 `ponytail:ponytail` 作为代码类任务的最小实现路由，把 `karpathy-guidelines` 作为编码和评审心智模型：先想清楚，保持简单，手术式修改，用可验证检查收尾。
 
 ## 默认行为
 
@@ -36,11 +36,12 @@ metadata:
 |---|---|---|
 | 简单事实、定义、命令输出 | 直接回答 | 不启动重流程。 |
 | 范围模糊、目标不清 | 中文总控 + 澄清 | 先问一个关键问题，或给出合理假设后继续。 |
-| 普通实现或 bug 修复 | 中文总控 + 卡帕西编码准则 + 验证收尾 | 先读代码/找复现点，再做最小改动，最后运行聚焦检查。 |
+| 普通实现、重构或 bug 修复 | 中文总控 + 小马尾最小实现 + 卡帕西编码准则 + 验证收尾 | 若 `ponytail:ponytail` 可见，先加载它并默认用 `full` 强度；先读代码/找复现点，再按 YAGNI、stdlib/native/dependency/一行优先级做最小改动，最后运行聚焦检查。 |
 | 用户明确要求多 worker、多 agent、并行代理、子代理 | 中文总控 + 多工人并行执行 | 必须先发现真实子代理工具：`multi_agent_v1` 可见则至少派出 1 个有清晰边界的 worker/explorer；不可见但 `tool_search` 可用则先搜索；仍无子代理时使用 `multi_tool_use.parallel` 做可并行的读取、搜索或验证；两者都不可用才说明无法真实并行。主线继续做不重叠工作，不把当前阻塞的下一步交给 worker 后空等。 |
 | 多个独立文件、问题、研究线或可分写集 | 中文总控 + 多工人并行执行 | 有真实子代理时按独立问题域/写集拆 worker；只有读取、搜索、验证等无状态任务时用 `multi_tool_use.parallel`。 |
 | 多个命令、文件读取、轻量验证但不值得子代理 | 中文总控 + 并行工具执行 | 用 `multi_tool_use.parallel` 批量读文件、搜索、跑互不依赖的检查。 |
-| 代码评审、评审一下 | 评审模式 + 卡帕西编码准则 | 先列风险和缺陷，按严重度排序，再给简短摘要。 |
+| 代码评审、评审一下 | 小马尾评审 + 卡帕西编码准则 | 若 `ponytail:ponytail-review` 可见，用它专查过度工程、重复造轮子、不必要依赖和可删除代码；再按严重度列真实风险。 |
+| 反过度工程、瘦身、删代码、最小实现 | 中文总控 + 小马尾最小实现 | 若 `ponytail:ponytail` 可见，优先加载；若是全仓审计且 `ponytail:ponytail-audit` 可见，使用小马尾审计；如果用户说“别用 ponytail/正常模式”，本轮不加载。 |
 | 文档排版、公文格式、Word/DOCX/PDF/Markdown/PPT/XLSX 格式处理 | 中文总控 + 文档排版 | 若 `document-formatting` 可见，先加载该技能并按场景选择格式规范；涉及真实文件时先检查文件结构，再输出到 `outputs`。 |
 | 需要计划但未要求实现 | 计划评审 | 若 Superpowers 中文版的 `writing-plans` 可见，优先使用；否则给短计划，每步带验证方式。 |
 | 高风险变更：认证、迁移、删除、公共 API | 计划评审 + 明确确认 | 先说明假设和风险，必要时停下问用户。 |
@@ -52,7 +53,9 @@ metadata:
 
 ## 当前环境约束
 
-- 在 Codex Desktop 中，优先使用本轮已经暴露的工具和技能。Superpowers 中文版已通过 `~/.agents/skills/superpowers` 注册；只有对应本地 skill 出现在可用技能列表时才按真实能力调用。`graphify` 也只有可见时才路由。
+- 在 Codex Desktop 中，优先使用本轮已经暴露的工具和技能。Superpowers 中文版已通过 `~/.agents/skills/superpowers` 注册；只有对应本地 skill 出现在可用技能列表时才按真实能力调用。`graphify` 和 `ponytail:*` 也只有可见时才路由。
+- 如果 Ponytail 可见：任何代码类任务（写代码、加功能、修 bug、重构、代码设计、依赖/库选择）默认在中文总控之后加载 `ponytail:ponytail`，显示中文别名“小马尾最小实现”。默认强度为 `full`；用户明确说 `lite`/`ultra`/`off`、`stop ponytail` 或“正常模式”时尊重用户选择。不要把 Ponytail 用在非代码请求（常识、翻译、普通总结、菜谱等）。
+- Ponytail 专项命令路由：过度工程评审用 `ponytail:ponytail-review`；全仓过度工程审计用 `ponytail:ponytail-audit`；整理 `ponytail:` 技术债注释用 `ponytail:ponytail-debt`；展示收益数据用 `ponytail:ponytail-gain`；查询命令卡片用 `ponytail:ponytail-help`。
 - 如果 Superpowers 中文版可见：每个非平凡任务必须先加载 `superpowers-zh:using-superpowers` 建立技能纪律；任何创造性工作、功能/组件/行为变更或实现前，必须先加载 `superpowers-zh:brainstorming`，并在设计获得批准前不得编辑文件或实现。符合触发条件时必须加载对应中文技能：实现或修复用 `superpowers-zh:test-driven-development`，调试用 `superpowers-zh:systematic-debugging`，并行开发用 `superpowers-zh:dispatching-parallel-agents` 或 `superpowers-zh:subagent-driven-development`，完成前用 `superpowers-zh:verification-before-completion`。只有中文技能不可见时才降级到英文同名技能，并在链路原因或进展中说明。
 - 如果 Graphify 可见：用户要求知识图谱、模块关系图、跨文档关联、代码库理解、论文/资料库关系梳理时，优先路由到 `graphify`。
 - 如果 Document Formatting 可见：用户要求公文排版、论文/报告/标书/合同/简历/PPT/表格排版，或处理 Word、DOCX、PDF、Markdown、PPT、XLSX 文档格式时，优先路由到 `document-formatting`，并以用户模板或上级规范为最高优先级。
@@ -106,6 +109,7 @@ metadata:
 - 文件引用用绝对路径链接。
 - 不把“工具名”当作用户必须理解的概念；必要时翻译成工作含义。
 - 技能链路行要显式给出并行决策，例如：
+  - `已选择技能链路：中文总控 + 小马尾最小实现 + 验证收尾（原因：代码类任务默认走最小正确实现；共享写集，不启用 worker）`
   - `已选择技能链路：中文总控 + 多工人并行执行 + 验证收尾（原因：实现、验证、审查可独立推进，启用 worker）`
   - `已选择技能链路：中文总控 + 并行工具读取 + 卡帕西编码准则（原因：只有独立文件读取，使用并行工具，不启用 worker）`
   - `已选择技能链路：中文总控 + 直接处理（原因：任务单点且很小，协调成本高于收益）`
