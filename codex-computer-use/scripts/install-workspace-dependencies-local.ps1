@@ -73,12 +73,12 @@ function Test-WorkspaceDependencies {
 function Invoke-PythonInstaller {
   param([object]$Manifest)
 
-  $manifestJson = $Manifest | ConvertTo-Json -Depth 20 -Compress
+  $manifestFile = Join-Path $env:TEMP ("codex-workspace-deps-manifest-" + [guid]::NewGuid().ToString("N") + ".json"); $manifestJson = $Manifest | ConvertTo-Json -Depth 20 -Compress; [System.IO.File]::WriteAllText($manifestFile, $manifestJson, [System.Text.UTF8Encoding]::new($false))
   $target = Get-Target
   $script = @'
 import hashlib, json, os, pathlib, shutil, sys, tarfile, tempfile, urllib.request, uuid
 
-manifest = json.loads(sys.argv[1])
+manifest_file = sys.argv[1]; manifest = json.loads(pathlib.Path(manifest_file).read_text(encoding="utf-8"))
 install_root = pathlib.Path(sys.argv[2])
 runtime_name = sys.argv[3]
 target = pathlib.Path(sys.argv[4])
@@ -144,12 +144,12 @@ finally:
   try {
     [System.IO.File]::WriteAllText($temp, $script, [System.Text.UTF8Encoding]::new($false))
     $python = Get-Command python -ErrorAction Stop | Select-Object -First 1
-    & $python.Source $temp $manifestJson $InstallRoot $RuntimeName $target
+    & $python.Source $temp $manifestFile $InstallRoot $RuntimeName $target
     if ($LASTEXITCODE -ne 0) {
       throw "python workspace dependency installer failed with exit code $LASTEXITCODE"
     }
   } finally {
-    Remove-Item -LiteralPath $temp -Force -ErrorAction SilentlyContinue
+    Remove-Item -LiteralPath $temp -Force -ErrorAction SilentlyContinue; Remove-Item -LiteralPath $manifestFile -Force -ErrorAction SilentlyContinue
   }
 }
 
