@@ -76,6 +76,7 @@
 |---|---|
 | `eyscrm_gend_codenav_skill` | G 端中台知识记忆与协同 skill，沉淀项目事实、红线、模板和组织语境。 |
 | `easygr-perspective` | EasyGR 决策镜片，适合政府合作、区域起盘、闭环设计、协同边界和复盘判断。 |
+| `mr-jack-perspective` | MR Jack 工作型数字分身，基于聊天记录和工作总结 OCR，用于用“我的视角”拆解协作、决策、复盘和下一步。 |
 
 ### 6. 应用、爬取与浏览器能力
 
@@ -147,6 +148,7 @@
 | 需要把资料整理成知识图谱 | `graphify` | `zhongwen-zongkong` + `graphify` |
 | G 端、中台、项目协同知识调用 | `eyscrm_gend_codenav_skill` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
 | 做政府合作判断、区域打法、协同闭环、项目复盘 | `easygr-perspective` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
+| 用 MR Jack / 我的视角做工作判断、沟通或复盘 | `mr-jack-perspective` | `mr-jack-perspective` 单独用，必要时叠加 `eyscrm_gend_codenav_skill` |
 | 做 ChatGPT Apps / MCP + Widget 应用 | `chatgpt-apps` | `chatgpt-apps` + `openai-docs`（若当前环境可见） |
 | 浏览器自动化、抓页面、做截图 | `playwright` | `zhongwen-zongkong` + `playwright` |
 | 网页抓取、HTML 解析、采集脚本 | `scrapling` | `zhongwen-zongkong` + `scrapling` |
@@ -179,6 +181,8 @@
   `zhongwen-zongkong` + `市场调研` + `country-trade-guides`
 - G 端方案或经营判断：
   `eyscrm_gend_codenav_skill` + `easygr-perspective`
+- 个人工作数字分身 / MR Jack 视角：
+  `mr-jack-perspective`
 - 复杂长任务需要多工人：
   `zhongwen-zongkong` + `team`
 - 论文类正式产出：
@@ -191,6 +195,7 @@
 - 如果任务核心是“出正式交付物”，优先看 `document-formatting`、`市场调研`、`ppt-master`、`paper-spine`。
 - 如果任务核心是“PPT”，新建演示优先看 `dashiai-ppt` 或 `GordenPPTSkill`；图片 / 扫描件转可编辑 PPT 优先看 `image-to-editable-ppt`。
 - 如果任务核心是“做判断而不是搬资料”，优先看 `hv-analysis`、`easygr-perspective`、`eyscrm_gend_codenav_skill`。
+- 如果用户明确说“MR Jack”“我的视角”“我的数字分身”，优先看 `mr-jack-perspective`。
 - 如果任务核心是“需要自动操作网页或浏览器”，优先看 `playwright`。
 - 如果任务核心是“需要多角色并行推进”，优先看 `team`。
 
