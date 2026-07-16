@@ -50,6 +50,7 @@
 | `karpathy-guidelines` | 卡帕西式编码准则，强调先想清楚、最小改动、可验证收尾。 |
 | `ai-slop-cleaner` | 清理“AI 味过重”的实现，做去臃肿、去套娃、去冗余重构。 |
 | `darwin-skill` | Skill 优化器，用于给 `SKILL.md` 打分、评审、迭代优化。 |
+| `n8n-to-codex-skill` | n8n 到 Codex 的 skill 脚手架，目前仍是待完善模板，适合后续补齐自动化迁移流程。 |
 | `cancel` | 取消活动中的 OMX / 自动执行模式，快速停掉相关工作流。 |
 
 ### 3. Codex / 桌面环境诊断
@@ -91,6 +92,12 @@
 | 目录 | 作用 |
 |---|---|
 | `ui-ux-pro-max` | UI/UX 设计增强 skill，适合网页、仪表盘、组件和视觉规范工作。 |
+| `emil-design-eng` | Emil Kowalski 设计工程哲学，适合 UI polish、组件细节、交互动效和设计工程评审。 |
+| `apple-design` | Apple 风格界面与流体交互指南，适合手势、弹簧、拖拽、材质、空间一致性和可访问动效。 |
+| `animation-vocabulary` | 动效术语反查表，把“那个弹一下/滑一下的效果”转换成准确动画术语。 |
+| `find-animation-opportunities` | 只读扫描 UI 中值得加动效的机会，并过滤掉不该动画的地方。 |
+| `improve-animations` | 只读审计现有动效并输出可执行改进计划，不直接改代码。 |
+| `review-animations` | 专门评审动效代码，按高标准检查缓动、时长、物理感、性能和可访问性。 |
 | `guizang-social-card-skill` | 社交卡片生成 skill，适合小红书图文、公众号封面、社媒轮播图。 |
 | `baoyu-comic` | 知识漫画生成 skill，适合教育漫画、人物传记漫画、教程漫画和分镜式图像生成。 |
 | `hatch-pet` | Codex 宠物生成与封装，适合角色图、精灵图集、宠物包产出。 |
@@ -153,6 +160,10 @@
 | 浏览器自动化、抓页面、做截图 | `playwright` | `zhongwen-zongkong` + `playwright` |
 | 网页抓取、HTML 解析、采集脚本 | `scrapling` | `zhongwen-zongkong` + `scrapling` |
 | 设计网页、组件、仪表盘、视觉样式 | `ui-ux-pro-max` | `zhongwen-zongkong` + `ui-ux-pro-max` |
+| 打磨 UI 细节、组件质感、动效取舍 | `emil-design-eng` | `emil-design-eng` + `apple-design` |
+| 不知道某个动效叫什么 | `animation-vocabulary` | `animation-vocabulary` 单独用 |
+| 想找哪些地方值得加动画 | `find-animation-opportunities` | `find-animation-opportunities` 单独用 |
+| 想审计或改进现有动画 | `improve-animations` / `review-animations` | 先 `improve-animations` 出计划，再用 `review-animations` 评审 |
 | 生成社交卡片、公众号封面、小红书图文 | `guizang-social-card-skill` | `guizang-social-card-skill` 单独用 |
 | 生成知识漫画、教育漫画、教程漫画 | `baoyu-comic` | `baoyu-comic` + `imagegen`（若当前环境可见） |
 | 生成宠物、角色 sprite、宠物包 | `hatch-pet` | `hatch-pet` + `imagegen`（若当前环境可见） |
@@ -177,6 +188,8 @@
   `zhongwen-zongkong` + `document-formatting`
 - PPT 生成或编辑：
   `document-formatting` + `dashiai-ppt` / `GordenPPTSkill` / `image-to-editable-ppt`
+- UI 动效与设计工程：
+  `emil-design-eng` + `apple-design` + `animation-vocabulary`
 - 市场研究并要引用国别指南：
   `zhongwen-zongkong` + `市场调研` + `country-trade-guides`
 - G 端方案或经营判断：
@@ -194,6 +207,7 @@
 - 如果任务核心是“怎么写代码 / 怎么做最小改动”，优先配 `karpathy-guidelines`。
 - 如果任务核心是“出正式交付物”，优先看 `document-formatting`、`市场调研`、`ppt-master`、`paper-spine`。
 - 如果任务核心是“PPT”，新建演示优先看 `dashiai-ppt` 或 `GordenPPTSkill`；图片 / 扫描件转可编辑 PPT 优先看 `image-to-editable-ppt`。
+- 如果任务核心是“UI 动效或交互质感”，优先看 `emil-design-eng`、`apple-design` 和动画三件套。
 - 如果任务核心是“做判断而不是搬资料”，优先看 `hv-analysis`、`easygr-perspective`、`eyscrm_gend_codenav_skill`。
 - 如果用户明确说“MR Jack”“我的视角”“我的数字分身”，优先看 `mr-jack-perspective`。
 - 如果任务核心是“需要自动操作网页或浏览器”，优先看 `playwright`。

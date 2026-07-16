@@ -1,0 +1,4 @@
+interface:
+  display_name: "n8n Workflow to Skill"
+  short_description: "Convert n8n workflows into tested Codex skills"
+  default_prompt: "Use $n8n-to-codex-skill to convert this n8n workflow into a validated Codex skill."
