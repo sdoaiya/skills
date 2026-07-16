@@ -1,0 +1,1088 @@
+{
+  "engine": "PaddleOCR-VL-1.6 MCP",
+  "source_root": "E:\\工作\\13-个人文件\\总结",
+  "count": 154,
+  "ok": 154,
+  "error": 0,
+  "empty": 3,
+  "items": [
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.11周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.11周总结.png.md",
+      "status": "ok",
+      "chars": 762,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.12周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.12周报.png.md",
+      "status": "ok",
+      "chars": 1555,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.14周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.14周总结.png.md",
+      "status": "ok",
+      "chars": 1547,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.18 周总结与下周计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.18 周总结与下周计划.png.md",
+      "status": "ok",
+      "chars": 1740,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.23日邹城线上培训课.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.23日邹城线上培训课.png.md",
+      "status": "ok",
+      "chars": 522,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.25周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.25周总结.png.md",
+      "status": "ok",
+      "chars": 1102,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1.28日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1.28日周总结.png.md",
+      "status": "ok",
+      "chars": 3167,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.13周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.13周报.png.md",
+      "status": "ok",
+      "chars": 4860,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.15周总结-周东岳.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.15周总结-周东岳.png.md",
+      "status": "ok",
+      "chars": 28,
+      "empty": true
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.19周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.19周总结与计划.png.md",
+      "status": "ok",
+      "chars": 2227,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.20周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.20周报.png.md",
+      "status": "ok",
+      "chars": 1555,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.26周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.26周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1043,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.27周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.27周报.png.md",
+      "status": "ok",
+      "chars": 2229,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10.29日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10.29日周总结.png.md",
+      "status": "ok",
+      "chars": 28,
+      "empty": true
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\10月22日周报总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\10月22日周报总结.png.md",
+      "status": "ok",
+      "chars": 863,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.11 周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.11 周总结.png.md",
+      "status": "ok",
+      "chars": 1878,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.18工作周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.18工作周总结.png.md",
+      "status": "ok",
+      "chars": 3425,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.23周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.23周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1990,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.25日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.25日周总结.png.md",
+      "status": "ok",
+      "chars": 6212,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.2周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.2周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1735,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.3周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.3周报.png.md",
+      "status": "ok",
+      "chars": 6211,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\11.9日总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\11.9日总结与计划.png.md",
+      "status": "ok",
+      "chars": 1221,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1117.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1117.png.md",
+      "status": "ok",
+      "chars": 29,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1124 周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1124 周报.png.md",
+      "status": "ok",
+      "chars": 9616,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.10周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.10周总结.png.md",
+      "status": "ok",
+      "chars": 1085,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.14周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.14周报.png.md",
+      "status": "ok",
+      "chars": 1537,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.17周汇报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.17周汇报.png.md",
+      "status": "ok",
+      "chars": 1274,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.21周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.21周报.png.md",
+      "status": "ok",
+      "chars": 942,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.22周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.22周报.png.md",
+      "status": "ok",
+      "chars": 34080,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.28周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.28周报.png.md",
+      "status": "ok",
+      "chars": 1276,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.29周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.29周报.png.md",
+      "status": "ok",
+      "chars": 662,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\12.7周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\12.7周报.png.md",
+      "status": "ok",
+      "chars": 1446,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1215周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1215周报.png.md",
+      "status": "ok",
+      "chars": 839,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\15日周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\15日周报.png.md",
+      "status": "ok",
+      "chars": 1358,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\1、5日周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\1、5日周报.png.md",
+      "status": "ok",
+      "chars": 1224,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\2.16周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\2.16周报.png.md",
+      "status": "ok",
+      "chars": 1506,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\2.1周报与下周计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\2.1周报与下周计划.png.md",
+      "status": "ok",
+      "chars": 1633,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\2.25日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\2.25日周总结.png.md",
+      "status": "ok",
+      "chars": 1788,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\2.9周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\2.9周总结.png.md",
+      "status": "ok",
+      "chars": 1584,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\20240114-120639.jpg",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\20240114-120639.jpg.md",
+      "status": "ok",
+      "chars": 26,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\2025市场部开年战略启动大会.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\2025市场部开年战略启动大会.png.md",
+      "status": "ok",
+      "chars": 28,
+      "empty": true
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\2026年开年OKR.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\2026年开年OKR.png.md",
+      "status": "ok",
+      "chars": 1575,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.10周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.10周总结.png.md",
+      "status": "ok",
+      "chars": 1298,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.15本周工作总结及下周计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.15本周工作总结及下周计划.png.md",
+      "status": "ok",
+      "chars": 3,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.16周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.16周报.png.md",
+      "status": "ok",
+      "chars": 72,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.17 周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.17 周总结.png.md",
+      "status": "ok",
+      "chars": 1241,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.1本周重点工作汇报下周工作计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.1本周重点工作汇报下周工作计划.png.md",
+      "status": "ok",
+      "chars": 814,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.22周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.22周报.png.md",
+      "status": "ok",
+      "chars": 1178,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.23周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.23周报.png.md",
+      "status": "ok",
+      "chars": 2429,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.23日总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.23日总结.png.md",
+      "status": "ok",
+      "chars": 9022,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.29周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.29周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1522,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.30周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.30周总结与计划.png.md",
+      "status": "ok",
+      "chars": 6,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.31日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.31日周总结.png.md",
+      "status": "ok",
+      "chars": 3813,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.3工作总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.3工作总结.png.md",
+      "status": "ok",
+      "chars": 3551,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.8周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.8周报.png.md",
+      "status": "ok",
+      "chars": 2,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\3.9周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\3.9周报.png.md",
+      "status": "ok",
+      "chars": 5038,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\34待完成.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\34待完成.png.md",
+      "status": "ok",
+      "chars": 501,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4.12周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4.12周总结与计划.png.md",
+      "status": "ok",
+      "chars": 6650,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4.13周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4.13周报.png.md",
+      "status": "ok",
+      "chars": 4,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4.19周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4.19周总结与计划.png.md",
+      "status": "ok",
+      "chars": 2310,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4.20周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4.20周报.png.md",
+      "status": "ok",
+      "chars": 1531,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4.26周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4.26周报.png.md",
+      "status": "ok",
+      "chars": 1023,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4.6周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4.6周报.png.md",
+      "status": "ok",
+      "chars": 866,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4月市场部计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4月市场部计划.png.md",
+      "status": "ok",
+      "chars": 1698,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4月总结5月计划--周东岳.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4月总结5月计划--周东岳.png.md",
+      "status": "ok",
+      "chars": 2237,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\4月总结与5月市场部计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\4月总结与5月市场部计划.png.md",
+      "status": "ok",
+      "chars": 1235,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\5.10 周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\5.10 周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1197,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\5.11周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\5.11周报.png.md",
+      "status": "ok",
+      "chars": 4,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\5.18周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\5.18周报.png.md",
+      "status": "ok",
+      "chars": 1668,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\5.25周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\5.25周报.png.md",
+      "status": "ok",
+      "chars": 987,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\5.26总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\5.26总结与计划.png.md",
+      "status": "ok",
+      "chars": 3843,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\5月总结与6月计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\5月总结与6月计划.png.md",
+      "status": "ok",
+      "chars": 1913,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.14总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.14总结与计划.png.md",
+      "status": "ok",
+      "chars": 15,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.15周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.15周报.png.md",
+      "status": "ok",
+      "chars": 1344,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.16周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.16周报.png.md",
+      "status": "ok",
+      "chars": 1062,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.18市场部-销售沟通.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.18市场部-销售沟通.png.md",
+      "status": "ok",
+      "chars": 211,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.21周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.21周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1150,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.23总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.23总结.png.md",
+      "status": "ok",
+      "chars": 1,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.29周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.29周报.png.md",
+      "status": "ok",
+      "chars": 6738,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.2日总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.2日总结与计划.png.md",
+      "status": "ok",
+      "chars": 736,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.30周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.30周总结.png.md",
+      "status": "ok",
+      "chars": 1863,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.7周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.7周总结与计划.png.md",
+      "status": "ok",
+      "chars": 7970,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.8周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.8周报.png.md",
+      "status": "ok",
+      "chars": 1227,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6.9周总结与下周计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6.9周总结与下周计划.png.md",
+      "status": "ok",
+      "chars": 3051,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6月15-6月18.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6月15-6月18.png.md",
+      "status": "ok",
+      "chars": 1069,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\6月总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\6月总结与计划.png.md",
+      "status": "ok",
+      "chars": 502,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.12周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.12周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1211,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.12活动人员分工安排.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.12活动人员分工安排.png.md",
+      "status": "ok",
+      "chars": 3,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.14周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.14周总结.png.md",
+      "status": "ok",
+      "chars": 5172,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.21周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.21周总结.png.md",
+      "status": "ok",
+      "chars": 4258,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.27周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.27周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1153,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.28周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.28周总结.png.md",
+      "status": "ok",
+      "chars": 6329,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.5 周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.5 周总结与计划.png.md",
+      "status": "ok",
+      "chars": 3974,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.6周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.6周报.png.md",
+      "status": "ok",
+      "chars": 1322,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\7.7日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\7.7日周总结.png.md",
+      "status": "ok",
+      "chars": 4579,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.10周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.10周报.png.md",
+      "status": "ok",
+      "chars": 777,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.11周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.11周报.png.md",
+      "status": "ok",
+      "chars": 3763,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.15线上直播活动筹备分工.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.15线上直播活动筹备分工.png.md",
+      "status": "ok",
+      "chars": 14,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.17周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.17周报.png.md",
+      "status": "ok",
+      "chars": 1467,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.18周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.18周总结.png.md",
+      "status": "ok",
+      "chars": 4,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.24周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.24周报.png.md",
+      "status": "ok",
+      "chars": 1880,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.25周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.25周总结.png.md",
+      "status": "ok",
+      "chars": 4447,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.3周总结与8月计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.3周总结与8月计划.png.md",
+      "status": "ok",
+      "chars": 1288,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\8.4日周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\8.4日周总结.png.md",
+      "status": "ok",
+      "chars": 1134,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9.16周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9.16周总结.png.md",
+      "status": "ok",
+      "chars": 5687,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9.1日周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9.1日周报.png.md",
+      "status": "ok",
+      "chars": 2966,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9.21周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9.21周总结.png.md",
+      "status": "ok",
+      "chars": 1557,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9.22周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9.22周报.png.md",
+      "status": "ok",
+      "chars": 1342,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9.24周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9.24周总结.png.md",
+      "status": "ok",
+      "chars": 1780,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9.8日周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9.8日周报.png.md",
+      "status": "ok",
+      "chars": 1032,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9月最后一周周报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9月最后一周周报.png.md",
+      "status": "ok",
+      "chars": 8,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\9月最后一周总结与10月计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\9月最后一周总结与10月计划.png.md",
+      "status": "ok",
+      "chars": 4183,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\AI赋能-周东岳.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\AI赋能-周东岳.png.md",
+      "status": "ok",
+      "chars": 445,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\P.jpg",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\P.jpg.md",
+      "status": "ok",
+      "chars": 2752,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\优品库2季度计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\优品库2季度计划.png.md",
+      "status": "ok",
+      "chars": 643,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\优品库在线入库流程管理.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\优品库在线入库流程管理.png.md",
+      "status": "ok",
+      "chars": 487,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\周总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\周总结.png.md",
+      "status": "ok",
+      "chars": 197,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\周总结12.24.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\周总结12.24.png.md",
+      "status": "ok",
+      "chars": 4178,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\周总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\周总结与计划.png.md",
+      "status": "ok",
+      "chars": 1068,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\周报（5月18日-5月24日）.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\周报（5月18日-5月24日）.png.md",
+      "status": "ok",
+      "chars": 1873,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\周汇报.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\周汇报.png.md",
+      "status": "ok",
+      "chars": 6845,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\品牌活动组.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\品牌活动组.png.md",
+      "status": "ok",
+      "chars": 2074,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\外贸培训课程系列.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\外贸培训课程系列.png.md",
+      "status": "ok",
+      "chars": 2508,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\外贸孵化培训计划试点.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\外贸孵化培训计划试点.png.md",
+      "status": "ok",
+      "chars": 503,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\客服工作SOP流程.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\客服工作SOP流程.png.md",
+      "status": "ok",
+      "chars": 635,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\山东优品库.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\山东优品库.png.md",
+      "status": "ok",
+      "chars": 537,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\市场外拓与政府沟通合作计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\市场外拓与政府沟通合作计划.png.md",
+      "status": "ok",
+      "chars": 574,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\市场汇总.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\市场汇总.png.md",
+      "status": "ok",
+      "chars": 1810,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\市场部年度复盘框架.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\市场部年度复盘框架.png.md",
+      "status": "ok",
+      "chars": 526,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\市场部曝光沟通机制.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\市场部曝光沟通机制.png.md",
+      "status": "ok",
+      "chars": 605,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\市场部组织架构.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\市场部组织架构.png.md",
+      "status": "ok",
+      "chars": 4,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\市场部职责与规划_00.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\市场部职责与规划_00.png.md",
+      "status": "ok",
+      "chars": 1243,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\总结.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\总结.png.md",
+      "status": "ok",
+      "chars": 6831,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\总结与Q4计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\总结与Q4计划.png.md",
+      "status": "ok",
+      "chars": 56,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\总结与计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\总结与计划.png.md",
+      "status": "ok",
+      "chars": 2261,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\总结与计划1.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\总结与计划1.png.md",
+      "status": "ok",
+      "chars": 8676,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\时间节点.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\时间节点.png.md",
+      "status": "ok",
+      "chars": 335,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\易盈出海市场规划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\易盈出海市场规划.png.md",
+      "status": "ok",
+      "chars": 2124,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\易盈出海政府园区以及商协会方向.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\易盈出海政府园区以及商协会方向.png.md",
+      "status": "ok",
+      "chars": 5531,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\易运盈市场部组织架构优化及实施.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\易运盈市场部组织架构优化及实施.png.md",
+      "status": "ok",
+      "chars": 26,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\易运盈销售部周总结4.16-周东岳.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\易运盈销售部周总结4.16-周东岳.png.md",
+      "status": "ok",
+      "chars": 1366,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\易运盈销售部周报-周东岳0514.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\易运盈销售部周报-周东岳0514.png.md",
+      "status": "ok",
+      "chars": 2490,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\本周工作重点与6月份计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\本周工作重点与6月份计划.png.md",
+      "status": "ok",
+      "chars": 5622,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\标书.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\标书.png.md",
+      "status": "ok",
+      "chars": 465,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\沟通概览.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\沟通概览.png.md",
+      "status": "ok",
+      "chars": 996,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\目标计划与问题.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\目标计划与问题.png.md",
+      "status": "ok",
+      "chars": 5003,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\线上工作分工.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\线上工作分工.png.md",
+      "status": "ok",
+      "chars": 8,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\线上综合部门SOP.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\线上综合部门SOP.png.md",
+      "status": "ok",
+      "chars": 681,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\线上销售组.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\线上销售组.png.md",
+      "status": "ok",
+      "chars": 10,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\经开区联营模式初步计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\经开区联营模式初步计划.png.md",
+      "status": "ok",
+      "chars": 632,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\计划拆分.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\计划拆分.png.md",
+      "status": "ok",
+      "chars": 254,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\重点项.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\重点项.png.md",
+      "status": "ok",
+      "chars": 762,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\销售部周总计与计划（格式）(4).png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\销售部周总计与计划（格式）(4).png.md",
+      "status": "ok",
+      "chars": 1115,
+      "empty": false
+    },
+    {
+      "source": "E:\\工作\\13-个人文件\\总结\\阶段扶持计划.png",
+      "output": "E:\\codex项目\\G-蒸馏\\.claude\\skills\\mr-jack-perspective\\references\\sources\\ocr\\阶段扶持计划.png.md",
+      "status": "ok",
+      "chars": 94,
+      "empty": false
+    }
+  ]
+}
