@@ -91,8 +91,12 @@
 |---|---|
 | `ui-ux-pro-max` | UI/UX 设计增强 skill，适合网页、仪表盘、组件和视觉规范工作。 |
 | `guizang-social-card-skill` | 社交卡片生成 skill，适合小红书图文、公众号封面、社媒轮播图。 |
+| `baoyu-comic` | 知识漫画生成 skill，适合教育漫画、人物传记漫画、教程漫画和分镜式图像生成。 |
 | `hatch-pet` | Codex 宠物生成与封装，适合角色图、精灵图集、宠物包产出。 |
 | `ppt-master` | PPT / SVG 内容生产系统，适合模板、页面、图形资产和多格式演示交付。 |
+| `dashiai-ppt` | Dashi PPT，基于预置视觉主题生成可离线打开、可浏览器编辑的 HTML 演示，并支持导出 PPTX / PDF。 |
+| `GordenPPTSkill` | 基于内置或用户自带 PPTX 模板生成 / 编辑可交付 PowerPoint，强调只替换文字并保持原排版。 |
+| `image-to-editable-ppt` | 将图片、截图、扫描版 PDF 或图片型 PPT 重建为对象级可编辑的 `.pptx`。 |
 
 ### 8. SEO 与网站诊断
 
@@ -148,8 +152,12 @@
 | 网页抓取、HTML 解析、采集脚本 | `scrapling` | `zhongwen-zongkong` + `scrapling` |
 | 设计网页、组件、仪表盘、视觉样式 | `ui-ux-pro-max` | `zhongwen-zongkong` + `ui-ux-pro-max` |
 | 生成社交卡片、公众号封面、小红书图文 | `guizang-social-card-skill` | `guizang-social-card-skill` 单独用 |
+| 生成知识漫画、教育漫画、教程漫画 | `baoyu-comic` | `baoyu-comic` + `imagegen`（若当前环境可见） |
 | 生成宠物、角色 sprite、宠物包 | `hatch-pet` | `hatch-pet` + `imagegen`（若当前环境可见） |
 | 做 PPT、SVG 模板、演示型图文产物 | `ppt-master` | `document-formatting` + `ppt-master` |
+| 快速生成 HTML 演示并可导出 PPTX / PDF | `dashiai-ppt` | `document-formatting` + `dashiai-ppt` |
+| 基于 PPTX 模板生成或编辑正式 PowerPoint | `GordenPPTSkill` | `document-formatting` + `GordenPPTSkill` |
+| 把图片 / 扫描 PDF / 截图转成可编辑 PPT | `image-to-editable-ppt` | `image-to-editable-ppt` 单独用 |
 | 做 SEO 审计或排查排名问题 | `seo-audit` | `zhongwen-zongkong` + `seo-audit` |
 | 论文、报告、比赛稿件端到端写作 | `paper-spine` | `paper-spine` + 其内部子 skill |
 | 想生成某个人物的“思维方式 skill” | `nuwa-skill` | `nuwa-skill` 单独用 |
@@ -165,6 +173,8 @@
   `zhongwen-zongkong` + `deep-interview` + `karpathy-guidelines`
 - 文档 / 报告交付：
   `zhongwen-zongkong` + `document-formatting`
+- PPT 生成或编辑：
+  `document-formatting` + `dashiai-ppt` / `GordenPPTSkill` / `image-to-editable-ppt`
 - 市场研究并要引用国别指南：
   `zhongwen-zongkong` + `市场调研` + `country-trade-guides`
 - G 端方案或经营判断：
@@ -179,6 +189,7 @@
 - 如果是中文非平凡任务，默认先从 `zhongwen-zongkong` 开始。
 - 如果任务核心是“怎么写代码 / 怎么做最小改动”，优先配 `karpathy-guidelines`。
 - 如果任务核心是“出正式交付物”，优先看 `document-formatting`、`市场调研`、`ppt-master`、`paper-spine`。
+- 如果任务核心是“PPT”，新建演示优先看 `dashiai-ppt` 或 `GordenPPTSkill`；图片 / 扫描件转可编辑 PPT 优先看 `image-to-editable-ppt`。
 - 如果任务核心是“做判断而不是搬资料”，优先看 `hv-analysis`、`easygr-perspective`、`eyscrm_gend_codenav_skill`。
 - 如果任务核心是“需要自动操作网页或浏览器”，优先看 `playwright`。
 - 如果任务核心是“需要多角色并行推进”，优先看 `team`。
