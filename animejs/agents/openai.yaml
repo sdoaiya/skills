@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anime.js"
+  short_description: "用 Anime.js 构建流畅、克制、可维护的前端动效"
+  default_prompt: "Use $animejs to add polished Anime.js motion to this interface."

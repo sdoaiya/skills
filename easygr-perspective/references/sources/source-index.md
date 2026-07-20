@@ -41,6 +41,12 @@
 - `D:\Personal\Desktop\三类交付材料包\易运盈G端产业带与链主候选企业活动增长执行方案_V1.0.docx`
 - `D:\Personal\Desktop\三类交付材料包\易运盈品牌增长事业部_产业链主候选企业活动操作手册_学习版.html`
 
+## 2026-07 链主全生命周期材料（新增一手语料）
+
+- `D:\Personal\Desktop\产业带链主全生命周期表单体系_全量Excel.xlsx`
+- `D:\Personal\Desktop\产业带链主筛选与培育体系_超级培训文档.docx`
+- `D:\Personal\Desktop\加盟好处.png`
+
 ## 备注
 
 - 本次蒸馏刻意避开了包含敏感凭据、账号信息或与人物建模无关的杂项文件。

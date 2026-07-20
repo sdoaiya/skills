@@ -58,8 +58,9 @@
 | 目录 | 作用 |
 |---|---|
 | `codex-computer-use` | 修复 Codex Desktop 的 Computer Use、Any App、浏览器桥接等问题。 |
-| `codex-session-restore` | 修复线程丢失、对话不显示、会话可见性异常等问题。 |
+| `codex-session-restore`（会话恢复） | 一键恢复切换官方或第三方提供方后消失的 Codex Desktop 会话，并修复侧边栏分组。 |
 | `fix-codex-windows` | 修复 Windows 上 Codex 窗口透明、黑块、圆角残留等桌面显示问题。 |
+| `codex-dream-skin` | 为 Windows Codex Desktop 安装、启动、验证或恢复可逆的外部主题，不修改 WindowsApps、`app.asar` 或应用签名。 |
 
 ### 4. 文档、研究与正式交付
 
@@ -76,7 +77,7 @@
 | 目录 | 作用 |
 |---|---|
 | `eyscrm_gend_codenav_skill` | G 端中台知识记忆与协同 skill，沉淀项目事实、红线、模板和组织语境。 |
-| `easygr-perspective` | EasyGR 决策镜片，适合政府合作、区域起盘、闭环设计、协同边界和复盘判断。 |
+| `easygr-perspective` | EasyGR 决策镜片，适合政府合作、区域起盘、链主全生命周期、闭环设计、协同边界和复盘判断。 |
 | `mr-jack-perspective` | MR Jack 工作型数字分身，基于聊天记录和工作总结 OCR，用于用“我的视角”拆解协作、决策、复盘和下一步。 |
 
 ### 6. 应用、爬取与浏览器能力
@@ -87,6 +88,45 @@
 | `playwright` | 浏览器自动化 skill，适合页面操作、截图、抓取、UI 流程调试。 |
 | `scrapling` | Scrapling 生态相关 skill，适合抓取、解析、MCP 配置和浏览器抓取场景。 |
 
+### 6.1 Firecrawl 全家桶
+
+| 目录 | 作用 |
+|---|---|
+| `firecrawl` | Firecrawl 总入口，适合搜索、抓取、爬取、解析和监控的统一路由。 |
+| `firecrawl-agent` | AI 驱动网页 agent，用于自动搜索、导航和提取。 |
+| `firecrawl-scrape` | 单页或多页清洗抓取，输出更干净的结构化内容。 |
+| `firecrawl-crawl` | 批量爬站，适合整站内容抽取和离线分析。 |
+| `firecrawl-map` | 网站结构映射，快速发现页面与链接层级。 |
+| `firecrawl-search` | 用 Firecrawl 搜索网页内容，适合实时检索。 |
+| `firecrawl-parse` | 解析本地文件为 markdown / HTML / JSON 等格式。 |
+| `firecrawl-interact` | 对已抓取页面做交互操作、提示执行和浏览器会话控制。 |
+| `firecrawl-download` | 下载完整页面或资源，便于本地留档。 |
+| `firecrawl-monitor` | 定时监控网页变化，适合持续观察内容更新。 |
+| `firecrawl-qa` | 对活页或抓取流程做 QA 验证。 |
+| `firecrawl-build-interact` | 把 Firecrawl 接入产品的交互型页面能力。 |
+| `firecrawl-build-onboarding` | 把 Firecrawl 接入用户 onboarding 流程。 |
+| `firecrawl-build-scrape` | 把 Firecrawl 接入产品抓取能力。 |
+| `firecrawl-build-search` | 把 Firecrawl 接入产品搜索能力。 |
+
+| 目录 | 作用 |
+|---|---|
+| `firecrawl-company-directories` | 抽取公司目录和组织结构信息。 |
+| `firecrawl-competitive-intel` | 做竞品监控、对比和情报追踪。 |
+| `firecrawl-dashboard-reporting` | 生成仪表盘和指标报告。 |
+| `firecrawl-deep-research` | 做更深入的网页研究和材料归纳。 |
+| `firecrawl-demo-walkthrough` | 生成演示讲解或产品 walkthrough。 |
+| `firecrawl-knowledge-base` | 搭建知识库抓取和整理流程。 |
+| `firecrawl-knowledge-ingest` | 把公开网页资料导入知识库。 |
+| `firecrawl-lead-gen` | 做线索收集和结构化获客。 |
+| `firecrawl-lead-research` | 做线索预研和背景调查。 |
+| `firecrawl-market-research` | 做市场研究、行业扫描和竞品洞察。 |
+| `firecrawl-research-index` | 建研究索引，方便后续检索和聚合。 |
+| `firecrawl-research-papers` | 用于论文、研究材料和学术网页整理。 |
+| `firecrawl-seo-audit` | 做站点 SEO 审计和技术诊断。 |
+| `firecrawl-shop` | 做商品、价格和电商页面研究。 |
+| `firecrawl-website-design-clone` | 抽取网站设计，用于设计复刻和参考。 |
+| `firecrawl-workflows` | Firecrawl 工作流总入口，适合组合型交付。 |
+
 ### 7. 设计、图像与内容资产
 
 | 目录 | 作用 |
@@ -95,6 +135,7 @@
 | `emil-design-eng` | Emil Kowalski 设计工程哲学，适合 UI polish、组件细节、交互动效和设计工程评审。 |
 | `apple-design` | Apple 风格界面与流体交互指南，适合手势、弹簧、拖拽、材质、空间一致性和可访问动效。 |
 | `animation-vocabulary` | 动效术语反查表，把“那个弹一下/滑一下的效果”转换成准确动画术语。 |
+| `animejs` | Anime.js 前端动效实现指南，适合用 `animate()`、`timeline()`、`stagger()` 构建克制、流畅、可维护的 JavaScript 动画。 |
 | `find-animation-opportunities` | 只读扫描 UI 中值得加动效的机会，并过滤掉不该动画的地方。 |
 | `improve-animations` | 只读审计现有动效并输出可执行改进计划，不直接改代码。 |
 | `review-animations` | 专门评审动效代码，按高标准检查缓动、时长、物理感、性能和可访问性。 |
@@ -153,6 +194,7 @@
 | 做产品 / 公司 / 概念的系统深度研究 | `hv-analysis` | `zhongwen-zongkong` + `hv-analysis` |
 | 需要从国别贸易 PDF 中找证据 | `country-trade-guides` | `市场调研` + `country-trade-guides` |
 | 需要把资料整理成知识图谱 | `graphify` | `zhongwen-zongkong` + `graphify` |
+| 需要做网页抓取、搜索、研究、监控或站点分析 | `firecrawl` | `zhongwen-zongkong` + `firecrawl` / `firecrawl-workflows` |
 | G 端、中台、项目协同知识调用 | `eyscrm_gend_codenav_skill` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
 | 做政府合作判断、区域打法、协同闭环、项目复盘 | `easygr-perspective` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
 | 用 MR Jack / 我的视角做工作判断、沟通或复盘 | `mr-jack-perspective` | `mr-jack-perspective` 单独用，必要时叠加 `eyscrm_gend_codenav_skill` |
@@ -162,6 +204,7 @@
 | 设计网页、组件、仪表盘、视觉样式 | `ui-ux-pro-max` | `zhongwen-zongkong` + `ui-ux-pro-max` |
 | 打磨 UI 细节、组件质感、动效取舍 | `emil-design-eng` | `emil-design-eng` + `apple-design` |
 | 不知道某个动效叫什么 | `animation-vocabulary` | `animation-vocabulary` 单独用 |
+| 用 Anime.js 实现前端动效、时间轴、错列动画 | `animejs` | `emil-design-eng` + `animejs` |
 | 想找哪些地方值得加动画 | `find-animation-opportunities` | `find-animation-opportunities` 单独用 |
 | 想审计或改进现有动画 | `improve-animations` / `review-animations` | 先 `improve-animations` 出计划，再用 `review-animations` 评审 |
 | 生成社交卡片、公众号封面、小红书图文 | `guizang-social-card-skill` | `guizang-social-card-skill` 单独用 |
@@ -174,7 +217,9 @@
 | 做 SEO 审计或排查排名问题 | `seo-audit` | `zhongwen-zongkong` + `seo-audit` |
 | 论文、报告、比赛稿件端到端写作 | `paper-spine` | `paper-spine` + 其内部子 skill |
 | 想生成某个人物的“思维方式 skill” | `nuwa-skill` | `nuwa-skill` 单独用 |
+| 切换官方或第三方提供方后旧会话消失 | `codex-session-restore`（会话恢复） | 先备份，再同步当前提供方并修复侧边栏 |
 | Codex 桌面环境、线程、控制能力出了问题 | `codex-computer-use` / `codex-session-restore` / `fix-codex-windows` | 先选最贴近问题的那个 |
+| 给 Windows Codex 安装、重启或恢复 Dream Skin | `codex-dream-skin` | `codex-dream-skin` 单独用 |
 
 ## 推荐组合
 
@@ -189,13 +234,17 @@
 - PPT 生成或编辑：
   `document-formatting` + `dashiai-ppt` / `GordenPPTSkill` / `image-to-editable-ppt`
 - UI 动效与设计工程：
-  `emil-design-eng` + `apple-design` + `animation-vocabulary`
+  `emil-design-eng` + `apple-design` + `animation-vocabulary` + `animejs`
 - 市场研究并要引用国别指南：
   `zhongwen-zongkong` + `市场调研` + `country-trade-guides`
+- 网页抓取 / 搜索 / 监控：
+  `zhongwen-zongkong` + `firecrawl` + `firecrawl-workflows`
 - G 端方案或经营判断：
   `eyscrm_gend_codenav_skill` + `easygr-perspective`
 - 个人工作数字分身 / MR Jack 视角：
   `mr-jack-perspective`
+- Windows Codex 外部主题管理：
+  `codex-dream-skin`
 - 复杂长任务需要多工人：
   `zhongwen-zongkong` + `team`
 - 论文类正式产出：
@@ -208,9 +257,12 @@
 - 如果任务核心是“出正式交付物”，优先看 `document-formatting`、`市场调研`、`ppt-master`、`paper-spine`。
 - 如果任务核心是“PPT”，新建演示优先看 `dashiai-ppt` 或 `GordenPPTSkill`；图片 / 扫描件转可编辑 PPT 优先看 `image-to-editable-ppt`。
 - 如果任务核心是“UI 动效或交互质感”，优先看 `emil-design-eng`、`apple-design` 和动画三件套。
+- 如果任务明确要用 Anime.js、`animejs`、`animate()`、`timeline()` 或 `stagger()` 实现动画，优先看 `animejs`。
 - 如果任务核心是“做判断而不是搬资料”，优先看 `hv-analysis`、`easygr-perspective`、`eyscrm_gend_codenav_skill`。
 - 如果用户明确说“MR Jack”“我的视角”“我的数字分身”，优先看 `mr-jack-perspective`。
 - 如果任务核心是“需要自动操作网页或浏览器”，优先看 `playwright`。
+- 如果任务核心是“抓网页、搜网页、监控网页变化、做 Firecrawl 工作流”，优先看 `firecrawl` 家族。
+- 如果任务明确涉及 Codex Dream Skin、Windows Codex 换肤或恢复官方外观，优先看 `codex-dream-skin`。
 - 如果任务核心是“需要多角色并行推进”，优先看 `team`。
 
 ## 更新注意事项
@@ -230,3 +282,4 @@ Get-ChildItem -Path $env:USERPROFILE\.codex\skills -Recurse -Filter SKILL.md
 
 - `name`
 - `description`
+

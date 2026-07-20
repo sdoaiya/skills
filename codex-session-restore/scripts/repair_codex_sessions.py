@@ -9,6 +9,8 @@ import os
 import shutil
 import sqlite3
 import time
+import tomllib
+from contextlib import closing
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -90,11 +92,64 @@ def collect_jsonl_cwds(codex_home: Path) -> dict[str, str]:
     return result
 
 
+def read_current_provider(codex_home: Path) -> str:
+    config_path = codex_home / "config.toml"
+    if not config_path.exists():
+        raise FileNotFoundError(f"Missing Codex config: {config_path}")
+    with config_path.open("rb") as handle:
+        config = tomllib.load(handle)
+    provider = config.get("model_provider")
+    if not isinstance(provider, str) or not provider:
+        raise ValueError(f"Missing model_provider in {config_path}")
+    return provider
+
+
+def sync_thread_provider(
+    codex_home: Path,
+    provider: str,
+    dry_run: bool,
+) -> tuple[int, list[str], Path | None]:
+    db_path = codex_home / "state_5.sqlite"
+    if not db_path.exists():
+        raise FileNotFoundError(f"Missing Codex database: {db_path}")
+
+    with closing(sqlite3.connect(db_path)) as db:
+        rows = db.execute(
+            """
+            SELECT id, rollout_path
+            FROM threads
+            WHERE archived = 0
+              AND source = 'vscode'
+              AND thread_source = 'user'
+              AND model_provider != ?
+            """,
+            (provider,),
+        ).fetchall()
+        valid_ids = [str(thread_id) for thread_id, path in rows if Path(path).is_file()]
+        missing_ids = [str(thread_id) for thread_id, path in rows if not Path(path).is_file()]
+        if not valid_ids or dry_run:
+            return len(valid_ids), missing_ids, None
+
+        stamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+        backup_path = codex_home / "history_sync_backups" / "database" / f"state_5.{stamp}.sqlite.bak"
+        backup_path.parent.mkdir(parents=True, exist_ok=True)
+        with closing(sqlite3.connect(backup_path)) as backup:
+            db.backup(backup)
+
+        db.execute("BEGIN IMMEDIATE")
+        db.executemany(
+            "UPDATE threads SET model_provider = ? WHERE id = ?",
+            [(provider, thread_id) for thread_id in valid_ids],
+        )
+        db.commit()
+    return len(valid_ids), missing_ids, backup_path
+
+
 def read_thread_cwds(codex_home: Path, jsonl_cwds: dict[str, str]) -> dict[str, str]:
     db_path = codex_home / "state_5.sqlite"
     if not db_path.exists():
         raise FileNotFoundError(f"Missing Codex database: {db_path}")
-    with sqlite3.connect(db_path) as db:
+    with closing(sqlite3.connect(db_path)) as db:
         rows = db.execute("SELECT id, cwd, archived FROM threads").fetchall()
     result: dict[str, str] = {}
     for thread_id, cwd, archived in rows:
@@ -204,9 +259,10 @@ def repair(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Repair Codex Desktop sidebar metadata without pinning threads.")
+    parser = argparse.ArgumentParser(description="Restore Codex Desktop conversations after provider switches.")
     parser.add_argument("--codex-home", default=str(Path.home() / ".codex"))
     parser.add_argument("--user-home", default=str(Path.home()))
+    parser.add_argument("--provider", help="Override model_provider from config.toml")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--clear-restored-pins", action="store_true")
     parser.add_argument("--watch-seconds", type=int, default=0)
@@ -215,23 +271,33 @@ def main() -> None:
 
     codex_home = Path(args.codex_home)
     user_home = Path(args.user_home)
+    provider = args.provider or read_current_provider(codex_home)
+    provider_touched, missing_ids, db_backup = sync_thread_provider(codex_home, provider, args.dry_run)
     deadline = time.monotonic() + max(args.watch_seconds, 0)
-    total_touched = 0
-    backups: list[Path] = []
+    sidebar_touched = 0
+    state_backups: list[Path] = []
     while True:
         touched, backup_path = repair(codex_home, user_home, args.dry_run, args.clear_restored_pins)
-        total_touched += touched
+        sidebar_touched += touched
         if backup_path:
-            backups.append(backup_path)
+            state_backups.append(backup_path)
         if args.watch_seconds <= 0 or time.monotonic() >= deadline:
             break
         time.sleep(max(args.watch_interval, 0.2))
 
     mode = "would update" if args.dry_run else "updated"
-    print(f"{mode} {total_touched} thread display mappings")
-    for backup_path in backups:
+    print(f"provider: {provider}")
+    print(f"{mode} {provider_touched} thread provider mappings")
+    print(f"{mode} {sidebar_touched} thread display mappings")
+    if missing_ids:
+        print(f"skipped {len(missing_ids)} threads with missing rollout files")
+    if db_backup:
+        print(f"backup: {db_backup}")
+    for backup_path in state_backups:
         print(f"backup: {backup_path}")
 
 
 if __name__ == "__main__":
     main()
+
+

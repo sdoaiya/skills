@@ -1,51 +1,47 @@
 ---
 name: codex-session-restore
-description: Diagnose and repair Codex Desktop conversation visibility after provider or relay switches. Use when local Codex threads exist in state_5.sqlite, sessions, archived_sessions, or session_index.jsonl but do not appear in the Desktop sidebar, especially when pinning made them visible temporarily.
+description: Restore Codex Desktop conversations after model-provider or relay switches. Use when users ask for “会话恢复”, “一键恢复”, “切回官方后恢复会话”, or when local threads exist in state_5.sqlite and sessions but disappear from the Desktop sidebar.
 ---
 
-# Codex Session Restore
+# 会话恢复
 
-## Overview
+## 原则
 
-Use this skill to restore local Codex Desktop conversations without relying on pinned threads. The main repair is to align three stores: `state_5.sqlite`, JSONL rollouts under `sessions` or `archived_sessions`, and `.codex-global-state.json` sidebar grouping metadata.
+先备份，再将顶层桌面会话同步到当前 `config.toml` 的 `model_provider`，最后修复 `.codex-global-state.json` 的侧边栏分组。不要用置顶代替修复，不要伪造缺失正文的会话。
 
-## Workflow
+## 一键恢复
 
-1. Locate the active Codex home, normally `%USERPROFILE%\.codex`.
-2. Back up before writes. For app code, use the built-in backup flow; for a direct repair, run `scripts/repair_codex_sessions.py`, which creates a `.codex-global-state.json.*.bak` backup.
-3. Restore database and JSONL visibility first when needed: active rows should be unarchived, use the current provider/model, and have a valid rollout path in `session_index.jsonl`.
-4. Repair Desktop sidebar grouping without pinning:
-   - Threads whose `cwd` is under `%USERPROFILE%\Documents\Codex` belong in `projectless-thread-ids`.
-   - Their `thread-workspace-root-hints[id]` should point to `%USERPROFILE%\Documents\Codex`.
-   - Their `thread-projectless-output-directories[id]` should be `<cwd>\outputs`.
-   - Project threads should be removed from `projectless-thread-ids` and have their workspace root present in `electron-saved-workspace-roots`, `project-order`, and `active-workspace-roots`.
-5. Do not treat `pinned-thread-ids` as a fix. Pinning is only a visibility workaround and should not be modified unless the user explicitly asks.
-6. Verify by listing threads in Codex Desktop, checking the sidebar grouping, and confirming that index-only records without JSONL bodies are reported as unrecoverable rather than fabricated.
-
-## Direct Repair Script
-
-Dry run:
-
-```powershell
-python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py --dry-run
-```
-
-Apply to the default Codex home:
+切换到目标提供方并确认 `%USERPROFILE%\.codex\config.toml` 已保存后运行：
 
 ```powershell
 python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py
 ```
 
-Keep the repaired state stable while the already-running Codex Desktop process may still flush an old in-memory global state:
+脚本只迁移正文存在、未归档、`source=vscode`、`thread_source=user` 的顶层桌面会话。它不会修改子任务、命令型会话、会话正文或历史模型名。
+
+## 诊断与稳定写入
+
+先预检：
 
 ```powershell
-python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py --clear-restored-pins --watch-seconds 120
+python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py --dry-run
 ```
 
-Target a different Codex home:
+桌面端仍在运行且可能覆盖全局状态时：
 
 ```powershell
-python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py --codex-home D:\backup\.codex
+python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py --watch-seconds 120
 ```
 
-The script repairs only `.codex-global-state.json` sidebar metadata. It does not modify thread bodies, `state_5.sqlite`, or `session_index.jsonl`. It leaves `pinned-thread-ids` alone unless `--clear-restored-pins` is passed.
+修复其他 Codex Home 或显式指定提供方：
+
+```powershell
+python C:\Users\zdy25\.codex\skills\codex-session-restore\scripts\repair_codex_sessions.py --codex-home D:\backup\.codex --provider openai
+```
+
+## 验证
+
+1. 再运行一次 `--dry-run`，两类映射都应为 `0`。
+2. 用 Codex Desktop 会话列表确认旧标题重新出现。
+3. 对 `skipped ... missing rollout files` 只报告，不生成虚假正文。
+4. 只有用户明确要求时才使用 `--clear-restored-pins`。
