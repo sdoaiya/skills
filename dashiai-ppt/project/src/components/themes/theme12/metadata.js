@@ -5497,6 +5497,8 @@ export const pages = [
       "kicker": "路线图 / Roadmap",
       "title": "未来四季，[[齐头并进]]。",
       "nowLabel": "当前 NOW",
+      "laneUnit": "lanes",
+      "quarterUnit": "quarters",
       "nowCol": 1,
       "quarters": [
         "26·Q1",
@@ -6285,12 +6287,14 @@ export const pages = [
       "ctaDefault": "免费开始",
       "ctaContact": "联系销售",
       "customLabel": "定制",
+      "unitMonthly": "/月",
+      "unitYearly": "/月 · 年付",
       "plans": [
         {
           "cn": "入门",
           "en": "Starter",
           "m": 0,
-          "y": 0,
+          "yearly": 0,
           "note": "永久免费",
           "desc": "适合刚起步的创作者",
           "feats": [
@@ -6303,7 +6307,7 @@ export const pages = [
           "cn": "专业",
           "en": "Pro",
           "m": 39,
-          "y": 29,
+          "yearly": 29,
           "note": "按月计费",
           "desc": "为认真经营的音乐人",
           "feats": [
@@ -6317,7 +6321,7 @@ export const pages = [
           "cn": "厂牌",
           "en": "Label",
           "m": 99,
-          "y": 79,
+          "yearly": 79,
           "note": "按月计费",
           "desc": "多艺人 · 团队协作",
           "feats": [
@@ -6331,7 +6335,7 @@ export const pages = [
           "cn": "企业",
           "en": "Enterprise",
           "m": null,
-          "y": null,
+          "yearly": null,
           "note": "定制报价",
           "desc": "平台级集成需求",
           "feats": [
@@ -7725,6 +7729,7 @@ export const pages = [
         "s": "当下"
       },
       "axisLabel": "占总播放份额 · SHARE OF PLAYS (%)",
+      "deltaUnit": "pt",
       "metrics": [
         {
           "t": "独立厂牌 Indies",
@@ -9354,6 +9359,7 @@ export const pages = [
       "axisY": "创作者掌控力 →",
       "ownLegend": "声浪 · 创作者主权象限",
       "rivalLegend": "传统方案 ·",
+      "rivalLegendSuffix": "家对照",
       "own": {
         "cn": "声浪",
         "en": "SoundWave",
@@ -11071,6 +11077,7 @@ export const pages = [
       "kicker": "画框墙 / Gallery Wall",
       "title": "把每张作品，[[挂上墙]]。",
       "metaPrefix": "声浪典藏 ·",
+      "countUnit": "works",
       "mediaPlaceholder": "拖入画作",
       "plaques": [
         {

@@ -3156,6 +3156,7 @@ export const pages = [
           }
         ],
         "timelineCap": "阶段性观察 · 2024 → 2027",
+        "timelineCapEn": "PHASE TIMELINE",
         "timeline": [
           {
             "year": "2024",
@@ -7004,6 +7005,8 @@ export const pages = [
         "kicker": "DEVELOPER TOOLS · 开发者工具赛道",
         "index": "33",
         "sheet": "STATEMENT · 33 / 80",
+        "leadZh": "研发效率",
+        "leadEn": "Developer Productivity",
         "quote": "研发效率，是企业\n最直接的 AI 预算入口之一。",
         "sub": "效率工具最贴近开发团队的日常，预算决策链路短、落地周期快。",
         "keywords": [
@@ -11945,6 +11948,7 @@ export const pages = [
         "message": "优势来自人才密度、资本网络、云厂商和模型实验室邻近。",
         "shareLabel": "湾区",
         "restLabel": "其余地区",
+        "gaugeCapEn": "SHARE OF TOTAL",
         "aux": [
           [
             "其余地区合计",
@@ -16600,6 +16604,7 @@ export const pages = [
           }
         ],
         "wallLabel": "壁垒墙",
+        "anchorCapEn": "RESIDUAL MOAT",
         "anchorNum": "14",
         "anchorUnit": "%",
         "anchorLabel": "剩余独立壁垒空间",
@@ -17042,6 +17047,7 @@ export const pages = [
         "flowCap": "工作流嵌入点",
         "flowUnit": "EMBED IN PROCESS",
         "embedBadge": "AI 嵌入",
+        "trackBase": "宿主刚性流程 · HOST PROCESS",
         "stages": [
           {
             "k": "业务输入",

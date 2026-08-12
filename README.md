@@ -77,7 +77,7 @@
 | 目录 | 作用 |
 |---|---|
 | `eyscrm_gend_codenav_skill` | G 端中台知识记忆与协同 skill，沉淀项目事实、红线、模板和组织语境。 |
-| `easygr-perspective` | EasyGR 决策镜片，适合政府合作、区域起盘、链主全生命周期、闭环设计、协同边界和复盘判断。 |
+| `easygr-perspective` | EasyGR 决策镜片，适合政府合作、诉求梯度、区域起盘、平台与链主协同、场景话术、项目 SOP、团队培训和复盘判断。 |
 | `mr-jack-perspective` | MR Jack 工作型数字分身，基于聊天记录和工作总结 OCR，用于用“我的视角”拆解协作、决策、复盘和下一步。 |
 
 ### 6. 应用、爬取与浏览器能力
@@ -127,11 +127,28 @@
 | `firecrawl-website-design-clone` | 抽取网站设计，用于设计复刻和参考。 |
 | `firecrawl-workflows` | Firecrawl 工作流总入口，适合组合型交付。 |
 
+### 6.2 逆向工程与安全分析
+
+`reverse-skill` 已同步 85 个 Skills：43 个核心逆向 / 安全分析 Skill，42 个 CTF 竞赛子 Skill。
+
+| 能力族 | 代表入口 | 作用 |
+|---|---|---|
+| 总控路由 | `reverse-skill-router` | 为 APK、二进制、前端 JS、移动端、云、取证、渗透和 CTF 任务选择专项 Skill。 |
+| 通用逆向 | `reverse-engineering` / `ghidra-reverse` / `ida-reverse` / `radare2` | 覆盖静态分析、动态调试、反编译、补丁和工具链路由。 |
+| 应用与平台 | `apk-reverse` / `mobile-reverse` / `dotnet-reverse` / `macos-reverse` / `go-rust-reverse` | 面向 Android、iOS、.NET、Mach-O、Go 和 Rust。 |
+| Web 与协议 | `js-reverse` / `browser-extension-reverse` / `protocol-reverse` / `api-security` | 分析前端加密、扩展、协议、API 和身份流。 |
+| 安全分析 | `malware-analysis` / `digital-forensics` / `threat-hunting` / `code-audit` | 覆盖恶意软件、取证、威胁狩猎和代码审计。 |
+| 基础设施 | `cloud-k8s` / `windows-ad` / `firmware-pentest` / `hardware-security` / `wifi-wireless` | 覆盖云容器、AD、固件、硬件接口和无线安全。 |
+| 攻击与竞赛 | `attack-chain` / `pwn-chain` / `pentest-tools` / `ctf-sandbox-orchestrator` | 用于授权安全测试、漏洞利用研究和 CTF 编排。 |
+
+只加载与当前任务相关的专项 Skill；使用前遵守仓库内 scope / auth / evidence 门禁，不直接执行未知脚本或对未授权目标操作。
+
 ### 7. 设计、图像与内容资产
 
 | 目录 | 作用 |
 |---|---|
 | `ui-ux-pro-max` | UI/UX 设计增强 skill，适合网页、仪表盘、组件和视觉规范工作。 |
+| `finesse-ui` | 高级网页界面设计 skill，按 brand / product 路线构建有质感、可用且不廉价的界面。 |
 | `emil-design-eng` | Emil Kowalski 设计工程哲学，适合 UI polish、组件细节、交互动效和设计工程评审。 |
 | `apple-design` | Apple 风格界面与流体交互指南，适合手势、弹簧、拖拽、材质、空间一致性和可访问动效。 |
 | `animation-vocabulary` | 动效术语反查表，把“那个弹一下/滑一下的效果”转换成准确动画术语。 |
@@ -140,12 +157,15 @@
 | `improve-animations` | 只读审计现有动效并输出可执行改进计划，不直接改代码。 |
 | `review-animations` | 专门评审动效代码，按高标准检查缓动、时长、物理感、性能和可访问性。 |
 | `guizang-social-card-skill` | 社交卡片生成 skill，适合小红书图文、公众号封面、社媒轮播图。 |
+| `ecom-details-image` | 电商视觉创作 skill，支持 25 类商品 / PDP / 营销图片场景、Prompt 编写和可选 AI 生图。 |
 | `baoyu-comic` | 知识漫画生成 skill，适合教育漫画、人物传记漫画、教程漫画和分镜式图像生成。 |
 | `hatch-pet` | Codex 宠物生成与封装，适合角色图、精灵图集、宠物包产出。 |
 | `ppt-master` | PPT / SVG 内容生产系统，适合模板、页面、图形资产和多格式演示交付。 |
 | `dashiai-ppt` | Dashi PPT，基于预置视觉主题生成可离线打开、可浏览器编辑的 HTML 演示，并支持导出 PPTX / PDF。 |
 | `GordenPPTSkill` | 基于内置或用户自带 PPTX 模板生成 / 编辑可交付 PowerPoint，强调只替换文字并保持原排版。 |
 | `image-to-editable-ppt` | 将图片、截图、扫描版 PDF 或图片型 PPT 重建为对象级可编辑的 `.pptx`。 |
+| `frame-smith` | Remotion 视频动效导演 skill，负责寄存器、效果引擎、节拍、入场编排、声音和合成注册。 |
+| `video-shotcraft` | 用镜头配方卡、Ink Press 模板、真实页面截图、2.5D 运镜和节奏卡点制作电影感产品视频。 |
 
 ### 8. SEO 与网站诊断
 
@@ -158,6 +178,8 @@
 | 目录 | 作用 |
 |---|---|
 | `nuwa-skill` | 女娲造人入口，基于人物或需求蒸馏新的“人物视角 skill”。 |
+| `weclone-init-twin` | 初始化数字分身人格包，生成 profile、state、示例回复和 guardrails 模板。 |
+| `weclone-twin-reply` | 结合人格包、场景和对话生成可审核的数字分身回复草稿，不自动发送。 |
 
 ### 10. PaperSpine 论文工作流家族
 
@@ -195,21 +217,28 @@
 | 需要从国别贸易 PDF 中找证据 | `country-trade-guides` | `市场调研` + `country-trade-guides` |
 | 需要把资料整理成知识图谱 | `graphify` | `zhongwen-zongkong` + `graphify` |
 | 需要做网页抓取、搜索、研究、监控或站点分析 | `firecrawl` | `zhongwen-zongkong` + `firecrawl` / `firecrawl-workflows` |
+| 逆向工程、安全分析、渗透测试或 CTF 任务 | `reverse-skill-router` | `reverse-skill-router` + 命中的专项 Skill |
+| 初始化数字分身人格文件 | `weclone-init-twin` | `weclone-init-twin` 单独用 |
+| 按指定人物口吻起草回复并保留人工审核 | `weclone-twin-reply` | `weclone-init-twin` + `weclone-twin-reply` |
 | G 端、中台、项目协同知识调用 | `eyscrm_gend_codenav_skill` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
-| 做政府合作判断、区域打法、协同闭环、项目复盘 | `easygr-perspective` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
+| 做政府合作判断、诉求表达、区域打法、平台与链主协同、场景话术、项目 SOP 或复盘 | `easygr-perspective` | `eyscrm_gend_codenav_skill` + `easygr-perspective` |
 | 用 MR Jack / 我的视角做工作判断、沟通或复盘 | `mr-jack-perspective` | `mr-jack-perspective` 单独用，必要时叠加 `eyscrm_gend_codenav_skill` |
 | 做 ChatGPT Apps / MCP + Widget 应用 | `chatgpt-apps` | `chatgpt-apps` + `openai-docs`（若当前环境可见） |
 | 浏览器自动化、抓页面、做截图 | `playwright` | `zhongwen-zongkong` + `playwright` |
 | 网页抓取、HTML 解析、采集脚本 | `scrapling` | `zhongwen-zongkong` + `scrapling` |
 | 设计网页、组件、仪表盘、视觉样式 | `ui-ux-pro-max` | `zhongwen-zongkong` + `ui-ux-pro-max` |
+| 做高级品牌页或产品界面，避免廉价 AI 风格 | `finesse-ui` | `finesse-ui` 单独用，必要时叠加 `ui-ux-pro-max` |
 | 打磨 UI 细节、组件质感、动效取舍 | `emil-design-eng` | `emil-design-eng` + `apple-design` |
 | 不知道某个动效叫什么 | `animation-vocabulary` | `animation-vocabulary` 单独用 |
 | 用 Anime.js 实现前端动效、时间轴、错列动画 | `animejs` | `emil-design-eng` + `animejs` |
 | 想找哪些地方值得加动画 | `find-animation-opportunities` | `find-animation-opportunities` 单独用 |
 | 想审计或改进现有动画 | `improve-animations` / `review-animations` | 先 `improve-animations` 出计划，再用 `review-animations` 评审 |
 | 生成社交卡片、公众号封面、小红书图文 | `guizang-social-card-skill` | `guizang-social-card-skill` 单独用 |
+| 生成商品主图、PDP 详情图或电商营销图片 | `ecom-details-image` | `ecom-details-image` + `imagegen`（若当前环境可见） |
 | 生成知识漫画、教育漫画、教程漫画 | `baoyu-comic` | `baoyu-comic` + `imagegen`（若当前环境可见） |
 | 生成宠物、角色 sprite、宠物包 | `hatch-pet` | `hatch-pet` + `imagegen`（若当前环境可见） |
+| 制作 Remotion 宣传片、短视频或视频动效 | `frame-smith` | `frame-smith` + `remotion:remotion-best-practices` |
+| 用镜头配方卡制作电影感产品宣传片或功能演示 | `video-shotcraft` | `video-shotcraft` + `remotion:remotion-best-practices` |
 | 做 PPT、SVG 模板、演示型图文产物 | `ppt-master` | `document-formatting` + `ppt-master` |
 | 快速生成 HTML 演示并可导出 PPTX / PDF | `dashiai-ppt` | `document-formatting` + `dashiai-ppt` |
 | 基于 PPTX 模板生成或编辑正式 PowerPoint | `GordenPPTSkill` | `document-formatting` + `GordenPPTSkill` |
@@ -235,11 +264,23 @@
   `document-formatting` + `dashiai-ppt` / `GordenPPTSkill` / `image-to-editable-ppt`
 - UI 动效与设计工程：
   `emil-design-eng` + `apple-design` + `animation-vocabulary` + `animejs`
+- 电商商品图 / PDP 图片包：
+  `ecom-details-image` + `imagegen`
+- 高级网页品牌页 / 产品界面：
+  `finesse-ui` + `ui-ux-pro-max` + `emil-design-eng`
+- Remotion 宣传片 / 短视频：
+  `frame-smith` + `remotion:remotion-best-practices`
+- 电影感产品宣传片 / 功能演示：
+  `video-shotcraft` + `remotion:remotion-best-practices`
 - 市场研究并要引用国别指南：
   `zhongwen-zongkong` + `市场调研` + `country-trade-guides`
 - 网页抓取 / 搜索 / 监控：
   `zhongwen-zongkong` + `firecrawl` + `firecrawl-workflows`
-- G 端方案或经营判断：
+- 逆向工程 / 安全分析：
+  `reverse-skill-router` + 对应专项 Skill
+- 数字分身回复：
+  `weclone-init-twin` + `weclone-twin-reply`
+- G 端方案、平台与链主协同、场景话术或 SOP：
   `eyscrm_gend_codenav_skill` + `easygr-perspective`
 - 个人工作数字分身 / MR Jack 视角：
   `mr-jack-perspective`
@@ -257,11 +298,17 @@
 - 如果任务核心是“出正式交付物”，优先看 `document-formatting`、`市场调研`、`ppt-master`、`paper-spine`。
 - 如果任务核心是“PPT”，新建演示优先看 `dashiai-ppt` 或 `GordenPPTSkill`；图片 / 扫描件转可编辑 PPT 优先看 `image-to-editable-ppt`。
 - 如果任务核心是“UI 动效或交互质感”，优先看 `emil-design-eng`、`apple-design` 和动画三件套。
+- 如果任务核心是“高级品牌页、产品界面或反廉价视觉审查”，优先看 `finesse-ui`。
+- 如果任务核心是“商品主图、PDP 详情图、电商营销图或图片 Prompt”，优先看 `ecom-details-image`。
 - 如果任务明确要用 Anime.js、`animejs`、`animate()`、`timeline()` 或 `stagger()` 实现动画，优先看 `animejs`。
+- 如果任务核心是“Remotion 视频、宣传片、短视频节拍和效果引擎编排”，优先看 `frame-smith`。
+- 如果任务核心是“用镜头配方卡、Ink Press 模板或 2.5D 运镜制作产品视频”，优先看 `video-shotcraft`。
 - 如果任务核心是“做判断而不是搬资料”，优先看 `hv-analysis`、`easygr-perspective`、`eyscrm_gend_codenav_skill`。
 - 如果用户明确说“MR Jack”“我的视角”“我的数字分身”，优先看 `mr-jack-perspective`。
 - 如果任务核心是“需要自动操作网页或浏览器”，优先看 `playwright`。
 - 如果任务核心是“抓网页、搜网页、监控网页变化、做 Firecrawl 工作流”，优先看 `firecrawl` 家族。
+- 如果任务核心是“逆向、安全分析、授权渗透测试或 CTF”，优先看 `reverse-skill-router`，再按路由只加载必要专项 Skill。
+- 如果任务核心是“建立数字分身人格或按人物口吻起草消息”，优先看 `weclone-init-twin` / `weclone-twin-reply`，并保留人工审核后再发送。
 - 如果任务明确涉及 Codex Dream Skin、Windows Codex 换肤或恢复官方外观，优先看 `codex-dream-skin`。
 - 如果任务核心是“需要多角色并行推进”，优先看 `team`。
 

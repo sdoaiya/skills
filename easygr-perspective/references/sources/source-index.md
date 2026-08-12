@@ -47,6 +47,19 @@
 - `D:\Personal\Desktop\产业带链主筛选与培育体系_超级培训文档.docx`
 - `D:\Personal\Desktop\加盟好处.png`
 
+## 2026-07 山东平台话术与 SOP 材料（新增一手语料）
+
+- `D:\Personal\Desktop\超级供应链平台\PPT\地方产业带供应链平台与链主协同出海试点项目20260721.pptx`
+- `D:\Personal\Desktop\产业带链主筛选与培育体系_超级培训文档.docx`
+- `D:\Personal\Desktop\超级供应链平台\话术\工信部门汇报材料——链主推荐与选品会邀约.docx`
+- `D:\Personal\Desktop\超级供应链平台\话术\商务局沟通材料——链主推荐与选品会邀约.docx`
+- `D:\Personal\Desktop\超级供应链平台\话术\工商联沟通材料——链主推荐与选品会邀约.docx`
+- `D:\Personal\Desktop\超级供应链平台\话术\老板讲商城.docx`
+- `D:\Personal\Desktop\超级供应链平台\话术\易运盈链主合作模式政府汇报话术与落地活动方案模板_V1.0.pdf`
+- `E:\codex项目\方案\outputs\山东资料包_V2.0\05_山东产业带平台与链主协同_知识底稿2.0.md`
+
+说明：上述 PDF 本次仅使用可检索文本层，未作图像级 OCR 或版面识别结论。
+
 ## 备注
 
 - 本次蒸馏刻意避开了包含敏感凭据、账号信息或与人物建模无关的杂项文件。

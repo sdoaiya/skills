@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="assets/skill/dashiai-ppt-favicon.png">
+<link rel="icon" type="image/png" href="assets/skill/dashi-ppt-favicon.png">
 <title>[必填] 替换为 PPT 标题 · Deck Title</title>
 <!-- Self-hosted fonts (no external CDN): Anton, Archivo, Caveat, IBM Plex Mono, IBM Plex Sans, Inter, JetBrains Mono, Newsreader, Space Grotesk, Space Mono. -->
 <!-- Noto Sans SC / Noto Serif SC / Zhi Mang Xing are NOT self-hosted (unicode-range-sharded CJK webfonts exceed size budget); system CJK fonts are used as fallback via the --sans / --sans-zh stacks below. -->
@@ -1948,7 +1948,7 @@
       <a href="https://www.douyin.com/user/MS4wLjABAAAAohe8JB4RvITJitJ69b7cV4NTaYTMYrVI43C-3SUnPPc" target="_blank" rel="noopener noreferrer" data-platform="douyin" aria-label="抖音" title="抖音">
         <img src="assets/social-icons/douyin.svg" data-social-icon="douyin" alt="" aria-hidden="true">
       </a>
-      <a href="https://www.xiaohongshu.com/user/profile/62e0c2bb000000001501408c?xsec_token=ABrZskc1MUcZWWuuMx7Fw52HYKSmhrHM2leT3iiPnMmG8%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener noreferrer" data-platform="xiaohongshu" aria-label="小红书" title="小红书">
+      <a href="https://www.xiaohongshu.com/user/profile/62e0c2bb000000001501408c" target="_blank" rel="noopener noreferrer" data-platform="xiaohongshu" aria-label="小红书" title="小红书">
         <img src="assets/social-icons/redbook.svg" data-social-icon="xiaohongshu" alt="" aria-hidden="true">
       </a>
       <a href="https://space.bilibili.com/3537118131391269/" target="_blank" rel="noopener noreferrer" data-platform="bilibili" aria-label="Bilibili" title="Bilibili">
@@ -2111,11 +2111,11 @@
     '当前非 HTTP 模式,无法导出': 'Not served over HTTP — export unavailable',
     '直接打开本地 HTML 文件时没有导出服务。把下面的提示词发给 AI,让它用 Dashi PPT 的预览服务打开后再导出:': 'Opening the local HTML file directly has no export service. Send the prompt below to your AI so it opens the deck with the Dashi PPT preview service, then export:',
     '发送给 AI,启动预览服务:': 'Send to your AI to start the preview service:',
-    '帮我用 dashiai-ppt 的预览服务启动这个 PPT 的预览 {dir}': 'Please start the preview of this deck with the dashiai-ppt preview service: {dir}',
+    '帮我用 dashi-ppt 的预览服务启动这个 PPT 的预览 {dir}': 'Please start the preview of this deck with the dashi-ppt preview service: {dir}',
     '当前服务不支持导出': 'This server does not support export',
     '这个地址后面没有可用的导出服务(可能是一个纯静态文件服务器,或预览服务已退出)。把下面的提示词发给 AI,让它用 Dashi PPT 自带的预览服务重新启动:': 'No export service is available at this address (it may be a plain static file server, or the preview service has exited). Send the prompt below to your AI so it restarts the deck with the Dashi PPT preview service:',
     '发送给 AI,重启预览服务:': 'Send to your AI to restart the preview service:',
-    '帮我用 dashiai-ppt 的预览服务重新启动这个 PPT 的预览': 'Please restart the preview of this deck with the dashiai-ppt preview service',
+    '帮我用 dashi-ppt 的预览服务重新启动这个 PPT 的预览': 'Please restart the preview of this deck with the dashi-ppt preview service',
     '也可以直接跟 AI 说:': 'Or simply tell your AI:',
     '帮我导出PPTX': 'Help me export the PPTX',
     '手动方式:在终端运行 npm --prefix <skill-root>/project run preview:start -- <输出 ppt 目录> <port>,再用它输出的 http://127.0.0.1:<port>/ 打开导出。': 'Manual option: run npm --prefix <skill-root>/project run preview:start -- <output ppt dir> <port> in a terminal, then open the printed http://127.0.0.1:<port>/ and export from there.',
@@ -2584,7 +2584,11 @@
   function compactStatePropsFromRender(slideId, renderProps){
     const defaults = getComponentDefaultSlideProps(slideId);
     const source = getSlideSourceProps(slideId);
-    const authored = compactAuthoredPropValue(renderProps || {}, defaults, source, '');
+    // 默认值剔除时必须看到 HTML 内嵌保存层(baseState.props):用户把颜色改回组件
+    // 默认值时,如果保存层里是旧颜色,当前默认值仍是一个必须保留的显式覆盖。但最后只能相对
+    // goal source 做根层 diff;若再相对 baseState diff,刚烧回 HTML 的媒体等值会在重新打开时被清空。
+    const fallback = {...source, ...(baseState.props?.[slideId] || {})};
+    const authored = compactAuthoredPropValue(renderProps || {}, defaults, fallback, '');
     if(!authored || typeof authored !== 'object' || Array.isArray(authored)) return {};
     return diffAuthoredRootForState(authored, source);
   }
@@ -4062,7 +4066,7 @@ const OVERVIEW_CARD_WIDTH=144;
 const OVERVIEW_CARD_PADDING=5;
 const OVERVIEW_CARD_GAP=12;
 const OVERVIEW_THUMB_NEAR_MARGIN=720;
-const OVERVIEW_THUMB_CACHE_LIMIT=160;
+const OVERVIEW_THUMB_CACHE_LIMIT=64;
 const OVERVIEW_THUMB_QUEUE_DELAY=80;
 const OVERVIEW_SYNC_RESTORE_LIMIT=8;
 const OVERVIEW_ASPECT_W=16;
@@ -4820,6 +4824,7 @@ function queueNearbyOverviewThumbs(opts={}){
   if(!isEditMode()) return;
   const startAt = performance.now();
   const range = getOverviewThumbRange(overviewGrid, {includeNear:true});
+  recycleOffscreenOverviewThumbs(range);
   const visibleWraps = getOverviewViewportThumbs();
   overviewProgressThumbs = visibleWraps;
   if(deckDiagnosticFlags.disableThumbGeneration){
@@ -4863,6 +4868,26 @@ function queueNearbyOverviewThumbs(opts={}){
   recordOverviewLayoutRead('queue-nearby', 'range-card-metrics', range.cards.length);
   recordOverviewStage('queue-nearby-overview-thumbs', startAt, {count:range.cards.length, queued:items.length});
 }
+function recycleOffscreenOverviewThumbs(range){
+  // 视口外缩略图回收:滚出 near 范围的整页 DOM 克隆退回 placeholder。渲染时
+  // rememberOverviewThumbFromDom 已写入缓存,滚回来走 dom-cache-restore 快速恢复;
+  // 不回收的话长 deck 翻页/滚动中活克隆线性积累(每张都是完整页面 DOM),越翻越卡。
+  if(!overviewGrid || !range?.cards) return;
+  const keep = new Set(range.cards);
+  const activeKey = getOverviewSlideKey(slides[idx]);
+  let recycled = 0;
+  overviewGrid.querySelectorAll('[data-overview-thumb="true"][data-overview-rendered="true"]').forEach(wrap => {
+    const card = wrap.closest('[data-overview-card="true"]');
+    if(!card || keep.has(card) || card.dataset.slideKey === activeKey) return;
+    delete wrap.dataset.overviewRendered;
+    delete wrap.dataset.overviewMode;
+    delete wrap.dataset.overviewQueued;
+    wrap.replaceChildren(createOverviewThumbPlaceholder());
+    recycled += 1;
+  });
+  if(recycled) recordOverviewStage('recycle-offscreen-thumbs', performance.now(), {count:recycled});
+}
+
 function queueVisibleOverviewThumbs(){
   queueNearbyOverviewThumbs();
 }
@@ -7570,10 +7595,16 @@ refreshRailCatalog();
       scene.id = elementId;
       frame.dataset.unicornReady = 'true';
       frame.dataset.unicornActiveSource = sourceKey;
+      // dpi 按实际显示尺寸自适应:deck 缩放 0.7 时无需按全尺寸 1.5x 超采样渲染,
+      // GPU 像素量随窗口缩放线性下降(unicorn 页「进入即卡」的主要来源)。
+      const declaredDpi = Number(frame.dataset.unicornDpi || 1.5);
+      const deckScale = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--deck-scale')) || 1;
+      const adaptiveDpi = Math.max(0.75, Math.min(declaredDpi, (window.devicePixelRatio || 1) * deckScale));
       const config = {
         elementId,
         scale: Number(frame.dataset.unicornScale || 1),
-        dpi: Number(frame.dataset.unicornDpi || 1.5),
+        dpi: adaptiveDpi,
+        fps: Number(frame.dataset.unicornFps || 30),
         lazyLoad: false,
         production: true,
         altText: 'Shader scene',
@@ -7910,7 +7941,7 @@ refreshRailCatalog();
     try {
       let dir = decodeURIComponent(location.pathname || '');
       dir = dir.replace(/\/[^\/]*$/, '');
-      // Windows 下 file:// 的 pathname 形如 /C:/Users/...,去掉开头斜杠还原盘符路径。
+      // Windows 下 file:// 的 pathname 形如 /C:/...,去掉开头斜杠还原盘符路径。
       if(/^\/[A-Za-z]:\//.test(dir + '/')) dir = dir.slice(1);
       return dir || location.href;
     } catch { return location.href; }
@@ -7945,15 +7976,15 @@ refreshRailCatalog();
       title: window.__deckI18n.ui('当前非 HTTP 模式,无法导出'),
       desc: window.__deckI18n.ui('直接打开本地 HTML 文件时没有导出服务。把下面的提示词发给 AI,让它用 Dashi PPT 的预览服务打开后再导出:'),
       startLabel: window.__deckI18n.ui('发送给 AI,启动预览服务:'),
-      // 提示词必须指名 dashiai-ppt 的预览服务:只说"启动 http 服务"会诱导 AI 用
+      // 提示词必须指名 dashi-ppt 的预览服务:只说"启动 http 服务"会诱导 AI 用
       // python -m http.server 等静态服务器,那正是 no-service 场景的事故根源。
-      startPrompt: () => window.__deckI18n.ui('帮我用 dashiai-ppt 的预览服务启动这个 PPT 的预览 {dir}', {dir: deckLocalDirForPrompt()}),
+      startPrompt: () => window.__deckI18n.ui('帮我用 dashi-ppt 的预览服务启动这个 PPT 的预览 {dir}', {dir: deckLocalDirForPrompt()}),
     },
     'no-service': {
       title: window.__deckI18n.ui('当前服务不支持导出'),
       desc: window.__deckI18n.ui('这个地址后面没有可用的导出服务(可能是一个纯静态文件服务器,或预览服务已退出)。把下面的提示词发给 AI,让它用 Dashi PPT 自带的预览服务重新启动:'),
       startLabel: window.__deckI18n.ui('发送给 AI,重启预览服务:'),
-      startPrompt: () => window.__deckI18n.ui('帮我用 dashiai-ppt 的预览服务重新启动这个 PPT 的预览'),
+      startPrompt: () => window.__deckI18n.ui('帮我用 dashi-ppt 的预览服务重新启动这个 PPT 的预览'),
     },
   };
   function showExportServiceRequired(mode){

@@ -17,6 +17,10 @@ from typing import Any
 
 
 def norm(value: str) -> str:
+    if value.startswith("\\\\?\\UNC\\"):
+        value = "\\\\" + value[8:]
+    elif value.startswith("\\\\?\\"):
+        value = value[4:]
     return os.path.normcase(os.path.abspath(value))
 
 
@@ -48,7 +52,7 @@ def remove_value(values: list[str], value: str) -> bool:
 
 
 def find_git_root(cwd: str) -> str | None:
-    current = Path(cwd).resolve()
+    current = Path(norm(cwd)).resolve()
     while True:
         if (current / ".git").exists():
             return str(current)
@@ -156,9 +160,9 @@ def read_thread_cwds(codex_home: Path, jsonl_cwds: dict[str, str]) -> dict[str, 
         if archived != 0:
             continue
         if isinstance(cwd, str) and cwd:
-            result[str(thread_id)] = cwd
+            result[str(thread_id)] = norm(cwd)
         elif str(thread_id) in jsonl_cwds:
-            result[str(thread_id)] = jsonl_cwds[str(thread_id)]
+            result[str(thread_id)] = norm(jsonl_cwds[str(thread_id)])
     return result
 
 
