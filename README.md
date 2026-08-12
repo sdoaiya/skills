@@ -148,6 +148,8 @@
 | 目录 | 作用 |
 |---|---|
 | `ui-ux-pro-max` | UI/UX 设计增强 skill，适合网页、仪表盘、组件和视觉规范工作。 |
+| `impeccable` | 前端设计总控 skill，覆盖新建界面、UX 评审、可访问性、响应式、排版、色彩、动效、性能和反模式检测。 |
+| `make-interfaces-feel-better` | 前端界面细节打磨指南，覆盖排版、圆角、阴影、图标、动效、交互状态、性能和可访问性审查。 |
 | `finesse-ui` | 高级网页界面设计 skill，按 brand / product 路线构建有质感、可用且不廉价的界面。 |
 | `emil-design-eng` | Emil Kowalski 设计工程哲学，适合 UI polish、组件细节、交互动效和设计工程评审。 |
 | `apple-design` | Apple 风格界面与流体交互指南，适合手势、弹簧、拖拽、材质、空间一致性和可访问动效。 |
@@ -227,6 +229,8 @@
 | 浏览器自动化、抓页面、做截图 | `playwright` | `zhongwen-zongkong` + `playwright` |
 | 网页抓取、HTML 解析、采集脚本 | `scrapling` | `zhongwen-zongkong` + `scrapling` |
 | 设计网页、组件、仪表盘、视觉样式 | `ui-ux-pro-max` | `zhongwen-zongkong` + `ui-ux-pro-max` |
+| 从规划到实现完整设计或审查前端界面 | `impeccable` | `zhongwen-zongkong` + `impeccable` |
+| 做 UI polish、微交互和视觉细节审查 | `make-interfaces-feel-better` | `make-interfaces-feel-better` + `impeccable` |
 | 做高级品牌页或产品界面，避免廉价 AI 风格 | `finesse-ui` | `finesse-ui` 单独用，必要时叠加 `ui-ux-pro-max` |
 | 打磨 UI 细节、组件质感、动效取舍 | `emil-design-eng` | `emil-design-eng` + `apple-design` |
 | 不知道某个动效叫什么 | `animation-vocabulary` | `animation-vocabulary` 单独用 |
@@ -264,6 +268,10 @@
   `document-formatting` + `dashiai-ppt` / `GordenPPTSkill` / `image-to-editable-ppt`
 - UI 动效与设计工程：
   `emil-design-eng` + `apple-design` + `animation-vocabulary` + `animejs`
+- 完整前端界面设计与质量收口：
+  `impeccable` + `finesse-ui` + `emil-design-eng`
+- UI 细节与微交互打磨：
+  `make-interfaces-feel-better` + `impeccable` + `animejs`
 - 电商商品图 / PDP 图片包：
   `ecom-details-image` + `imagegen`
 - 高级网页品牌页 / 产品界面：
@@ -298,6 +306,8 @@
 - 如果任务核心是“出正式交付物”，优先看 `document-formatting`、`市场调研`、`ppt-master`、`paper-spine`。
 - 如果任务核心是“PPT”，新建演示优先看 `dashiai-ppt` 或 `GordenPPTSkill`；图片 / 扫描件转可编辑 PPT 优先看 `image-to-editable-ppt`。
 - 如果任务核心是“UI 动效或交互质感”，优先看 `emil-design-eng`、`apple-design` 和动画三件套。
+- 如果任务需要从界面规划、实现到 UX / 可访问性 / 响应式收口，优先看 `impeccable`。
+- 如果任务核心是“让界面感觉更好”、微交互、图标状态、圆角、阴影或动效细节，优先看 `make-interfaces-feel-better`。
 - 如果任务核心是“高级品牌页、产品界面或反廉价视觉审查”，优先看 `finesse-ui`。
 - 如果任务核心是“商品主图、PDP 详情图、电商营销图或图片 Prompt”，优先看 `ecom-details-image`。
 - 如果任务明确要用 Anime.js、`animejs`、`animate()`、`timeline()` 或 `stagger()` 实现动画，优先看 `animejs`。
